@@ -1,0 +1,13 @@
+// header section aid olan property deyerleri
+#header {
+    height: 633px;
+    background: url('/img/backround.jpg');
+    background-size: cover;
+    // header icinde oldugu ucun nested style istifade edildi
+    .nav {
+        border-bottom: 0.5px solid white;
+        padding: 38px 93px;
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+
