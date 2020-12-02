@@ -22,4 +22,10 @@
 - Main/About səhifəsində header bölməsinin SASS/CSS texnologiyasının tətbiqi ilə işlərin yekunlaşdırılması
   - logo və xəritə menyusu makete uyğun tənzimlənib, dizayn olundu.
 
+# Day 03
 
+ - Header bölməsinin HTML/CSS/SASS strukturunun bitməsi :
+   - SASS folder strukturunun bitməsi 
+   - Ortaq klass tetbiqi 
+   - İcon ve middle obyektlerinin yerləşməsi
+   - Ortaq varible istifade 
