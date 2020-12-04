@@ -29,3 +29,10 @@
    - Ortaq klass tetbiqi 
    - İcon ve middle obyektlerinin yerləşməsi
    - Ortaq varible istifade 
+
+# Day 04
+
+- About hissesinin HTML/CSS/SASS strukturunun qurulması:
+  - CSS Grid texnologiyasindan istifade ederek table formasinin yaradılması
+  - CSS kodlarının SASS keşirilmesi ile optimalaşdırılması
+  - Template esasen obyektlerin formalaşması
