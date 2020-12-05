@@ -36,3 +36,13 @@
   - CSS Grid texnologiyasindan istifade ederek table formasinin yaradılması
   - CSS kodlarının SASS keşirilmesi ile optimalaşdırılması
   - Template esasen obyektlerin formalaşması
+
+# Day 05
+
+- What I Do hisessinin strukturunun qurulması :
+  - CSS Grid texnologiyasından istifadə edərək nested 2 blok yaradıldı:
+    - İnner blok daxilində 2 sətir yaradıldı
+    - Üst sətirdə 1 column containerin max width olaraq təyin olundu
+    - Alt sətirdə isə daxilində 6 eyni ölçülü column şəklində bloklar yaradıldı
+  - Template uygun olaraq obyektlər formalaşdı və struktura uyğun olaraq yerləşdirildi
+  - İconların eynisinin tapılmadığı üçün maksimum bənzər olanlarla əvəz olundu

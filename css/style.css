@@ -133,7 +133,7 @@
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
   color: #898989;
-  background: #ffffff;
+  background: white;
   line-height: 25px;
   letter-spacing: 0.03em;
   font-weight: 300;
@@ -148,6 +148,8 @@
 }
 
 #about .row .column2 .btn a:hover {
+  -webkit-transition: 1s;
+  transition: 1s;
   background: yellow;
 }
 
@@ -161,23 +163,107 @@
   text-transform: uppercase;
   cursor: pointer;
   text-decoration: none;
-  -webkit-box-shadow: inset 0 -6px 0 #fdd912;
+  -webkit-box-shadow: inset 0 -6px 0 yellow;
   height: 14px;
   opacity: 1;
   outline: none;
 }
 
-body {
-  margin: 0px;
-  font-family: 'Poppins', helvetica;
+#whatido {
+  height: 638px;
+  background: #f9f9f9;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-.reset_parameteres, #header .nav .navbar .navbarright ul, #header .content .hobbies ul {
+#whatido .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 7fr;
+      grid-template-rows: 1fr 7fr;
+  width: 1160px;
+  height: 400px;
+}
+
+#whatido .container .title {
+  font-family: 'Kaushan Script', cursive;
+  color: #292929;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#whatido .container .title span {
+  padding-left: 18px;
+}
+
+#whatido .container .ability {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 174px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box {
+  border: 1px solid black;
+}
+
+[class^="skill"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 20px;
+}
+
+[class^="items"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 25px;
+}
+
+[class^="icon"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 360px;
+  height: 48px;
+  font-size: 44px;
+  line-height: 48px;
+  color: #fdd912;
+}
+
+[class^="name"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px 0;
+  font-size: 13px;
+  color: #292929;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+[class^="text"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 13px;
+  line-height: 22px;
+}
+
+body {
+  margin: 0px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.reset_parameteres, #header .nav .navbar .navbarright ul, #header .content .hobbies ul, [class^="text"] {
   margin: 0px;
   padding: 0px;
 }
 
-.flex-all-center, #header .content .hobbies ul, #header .content .media, #header .content .arrow {
+.flex-all-center, #header .content .hobbies ul, #header .content .media, #header .content .arrow, #whatido {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

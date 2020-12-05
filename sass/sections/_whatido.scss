@@ -1,0 +1,71 @@
+#whatido {
+    height: 638px;
+    background: #f9f9f9;
+    box-sizing: border-box;
+    @extend .flex-all-center;
+    .container {
+        display: grid;
+        grid-template-rows: 1fr 7fr;
+        width: 1160px;
+        height: 400px;
+        .title {
+            font-family: 'Kaushan Script', cursive;
+            color: #292929;
+            font-size: 30px;
+            line-height: 40px;
+            font-weight: 400;
+            box-sizing: border-box;
+            span {
+                padding-left: 18px;
+            }
+        }
+        .ability {
+            display: grid;
+            grid-template-columns:repeat(3, 1fr);
+            grid-auto-rows: 174px;
+            box-sizing: border-box;
+        }
+    }
+
+}
+
+.box {
+    border: 1px solid black;
+}
+[class^="skill"] {
+    
+    box-sizing:border-box;
+    padding: 0 20px;
+}
+[class^="items"] {
+    
+    box-sizing:border-box;
+    margin-top: 25px;
+}
+[class^="icon"] {
+    
+    box-sizing:border-box;
+    width: 360px;
+    height: 48px;
+    font-size: 44px;
+    line-height: 48px;
+    color: #fdd912;
+}
+[class^="name"] {
+    
+    box-sizing:border-box;
+    margin: 10px 0;
+    font-size: 13px;
+    color: #292929;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+[class^="text"] {
+    
+    box-sizing: border-box;
+    font-size: 13px;
+    line-height: 22px;
+    @extend .reset_parameteres;
+}

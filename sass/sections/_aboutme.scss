@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #898989;
+    color: $about-color;
     .row {
         width: 1200px;
         height: 420px;
@@ -32,8 +32,8 @@
             p {
                 font-family: 'Poppins', sans-serif;
                 font-size: 15px;
-                color: #898989;
-                background: #ffffff;
+                color: $about-color;
+                background: $text-color;
                 line-height: 25px;
                 letter-spacing: 0.03em;
                 font-weight: 300;
@@ -46,7 +46,8 @@
                 padding-left: 40px;
                 
                 a:hover{
-                    background:yellow;
+                    transition: 1s;
+                    background:$about-ref-color;
                 }
             }
             a {
@@ -59,12 +60,10 @@
                 text-transform: uppercase;
                 cursor: pointer;
                 text-decoration: none;
-                -webkit-box-shadow: inset 0 -6px 0 #fdd912;
+                -webkit-box-shadow: inset 0 -6px 0 $about-ref-color;
                 height: 14px;
                 opacity: 1;
                 outline: none;
-                
-                
             }
         }
     }
