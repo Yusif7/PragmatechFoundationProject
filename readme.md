@@ -46,3 +46,13 @@
     - Alt sətirdə isə daxilində 6 eyni ölçülü column şəklində bloklar yaradıldı
   - Template uygun olaraq obyektlər formalaşdı və struktura uyğun olaraq yerləşdirildi
   - İconların eynisinin tapılmadığı üçün maksimum bənzər olanlarla əvəz olundu
+
+# Day 06
+
+- Works bölməsinin strukturun qurulması :
+  - CSS Grid texnologiyasinin tətbiqi ilə 2 blok yaradıldı:
+   - İnner blok tərkibində 3 row
+   - Ilk 2 row bir sütünda 
+   - 3 row isə 6 columnan ibarətdir
+  - Template uygun olaraq obyektlər formalaşdı və struktura uyğun olaraq yerləşdirildi
+

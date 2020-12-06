@@ -1,0 +1,105 @@
+#works {
+    height: 900px;
+    @extend .flex-all-center;
+    .container {
+        width: 1160px;
+        height: 627px;
+        display: grid;
+        grid-template-rows: 1fr 1fr 16fr;
+        .title {
+            
+            span {
+                font-family: 'Kaushan Script', cursive;
+                color: #292929;
+                font-size: 30px;
+                line-height: 40px;
+                font-weight: 400;
+                padding-left: 20px;
+            }
+        }
+        .filter {
+            
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            ul {
+                @extend .reset_parameteres;
+                display:inline-block;
+                box-sizing: border-box;
+                li {
+
+                    display: inline-block;
+                    margin: 0 25px 0 20px; 
+                    font-size: 15px;
+                    color: #999999;
+                    line-height: 16px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .work_example{
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            box-sizing:border-box;
+            grid-auto-rows: 285px;
+            .example1 {
+                .work_image1 {
+                    a img {
+                        @extend .image-full-div
+                    }
+                }
+            }
+            .example2 {
+                .work_image2 {
+                    a img {
+                        @extend .image-full-div
+                    }
+                }
+            }
+            .example3 {
+                .work_image3 {
+                    a img {
+                        @extend .image-full-div
+                    }
+                }
+            }
+            .example4 {
+                .work_image4 {
+                    a img {
+                        @extend .image-full-div;
+                        padding-top: 20px;
+                    }
+                }
+            }
+            .example5 {
+                .work_image5 {
+                    a img {
+                        @extend .image-full-div;
+                        padding-top: 20px;
+                    }
+                }
+            }
+            .example6 {
+                .work_image6 {
+                    a img {
+                        @extend .image-full-div;
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.box {
+    border: 1px solid black;
+}
+[class^="example"] {
+    box-sizing:border-box;
+}
+[class^="work_image"] {
+    padding: 0px 20px;
+}
