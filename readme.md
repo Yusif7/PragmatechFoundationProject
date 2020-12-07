@@ -56,3 +56,8 @@
    - 3 row isə 6 columnan ibarətdir
   - Template uygun olaraq obyektlər formalaşdı və struktura uyğun olaraq yerləşdirildi
 
+# Day 07
+
+- Blog hissesinin strukturunu yekunlaşdırılması
+  - CSS Grid texnologiyasinin tətbiqi
+  - Ortaq class, Variables istifadəsi

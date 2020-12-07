@@ -2,6 +2,7 @@ body {
     margin: 0px;
     font-family: 'Poppins', sans-serif;
 }
+
 .reset_parameteres {
     margin: 0px;
     padding: 0px;
@@ -16,4 +17,9 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.a-type {
+    text-decoration: none;
+    outline: none;
 }

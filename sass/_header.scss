@@ -1,6 +1,6 @@
 // header section menu bar, logo, backround image
 #header {
-    height: 633px;
+    height: 635px;
     background: url('/img/backround-new.png');
     background-size: cover;
     // header icinde oldugu ucun nested style istifade edildi
@@ -37,6 +37,11 @@
                         letter-spacing: 0.1em;
                         font-weight: 500; // Dolqunluq 
                         line-height: 14px;
+                        outline: none;
+                    }
+                    a {
+                        text-decoration: none;
+                        color:$text-color;
                     }
             }
         }

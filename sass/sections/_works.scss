@@ -1,5 +1,5 @@
 #works {
-    height: 900px;
+    height: 850px;
     @extend .flex-all-center;
     .container {
         width: 1160px;
@@ -7,7 +7,6 @@
         display: grid;
         grid-template-rows: 1fr 1fr 16fr;
         .title {
-            
             span {
                 font-family: 'Kaushan Script', cursive;
                 color: #292929;
@@ -18,7 +17,6 @@
             }
         }
         .filter {
-            
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -44,49 +42,12 @@
             grid-template-columns: repeat(3,1fr);
             box-sizing:border-box;
             grid-auto-rows: 285px;
-            .example1 {
-                .work_image1 {
-                    a img {
-                        @extend .image-full-div
-                    }
-                }
+            img {
+                @extend .image-full-div;
             }
-            .example2 {
-                .work_image2 {
-                    a img {
-                        @extend .image-full-div
-                    }
-                }
-            }
-            .example3 {
-                .work_image3 {
-                    a img {
-                        @extend .image-full-div
-                    }
-                }
-            }
-            .example4 {
-                .work_image4 {
-                    a img {
-                        @extend .image-full-div;
-                        padding-top: 20px;
-                    }
-                }
-            }
-            .example5 {
-                .work_image5 {
-                    a img {
-                        @extend .image-full-div;
-                        padding-top: 20px;
-                    }
-                }
-            }
-            .example6 {
-                .work_image6 {
-                    a img {
-                        @extend .image-full-div;
-                        padding-top: 20px;
-                    }
+            .example4 .example5 .example6 {
+                a img {
+                    padding-top: 20px;
                 }
             }
         }

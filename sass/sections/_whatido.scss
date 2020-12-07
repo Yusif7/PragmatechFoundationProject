@@ -1,5 +1,5 @@
 #whatido {
-    height: 638px;
+    height: 635px;
     background: #f9f9f9;
     box-sizing: border-box;
     @extend .flex-all-center;
@@ -10,7 +10,7 @@
         height: 400px;
         .title {
             font-family: 'Kaushan Script', cursive;
-            color: #292929;
+            color: $about-text-color;
             font-size: 30px;
             line-height: 40px;
             font-weight: 400;
