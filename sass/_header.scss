@@ -11,11 +11,10 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            .navbarleft{ 
+            .navbarleft { 
                 width: 120px;
                 display: inline-block;
-                
-                a{
+                a {
                     display: inline-block;
                     font-family: 'Kaushan Script', cursive;
                     font-size: 32px;
@@ -26,10 +25,10 @@
                     font-style: italic;
                 }
             }
-            .navbarright ul{
+            .navbarright ul {
                     @extend .reset_parameteres;
                     display:inline-block;
-                    li{
+                    li {
                         display: inline-block;
                         margin: 0 18px;
                         font-size: 12px;
@@ -47,15 +46,15 @@
         }
     }
     // header section middle content
-    .content{
+    .content {
             height: 348px;
-        .hobbies{
+        .hobbies {
             margin-top: 190px; 
-            ul{
+            ul {
                 @extend .reset_parameteres;
                 height: 100px;
                 @extend .flex-all-center;
-                li{
+                li {
                     display: inline-block;
                     padding: 0 20px;
                     color:$text-color;
@@ -65,7 +64,7 @@
                 }
             }
         }
-        .media{
+        .media {
             @extend .flex-all-center;
             a i{
                 padding: 0 10px;
@@ -75,7 +74,7 @@
         .arrow {
             @extend .flex-all-center;
             margin-top: 145px;
-            a i{
+            a i {
                 color: $text-color;
                 font-size: 24px;
             }

@@ -61,3 +61,8 @@
 - Blog hissesinin strukturunu yekunlaşdırılması
   - CSS Grid texnologiyasinin tətbiqi
   - Ortaq class, Variables istifadəsi
+
+# Day 08
+
+- Contact hissəsinin yekunlaşması:
+  - Form template uygun olaraq yigildi

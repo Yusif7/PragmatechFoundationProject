@@ -4,8 +4,6 @@
     box-sizing: border-box;
     @extend .flex-all-center;
     .container {
-        display: grid;
-        grid-template-rows: 1fr 7fr;
         width: 1160px;
         height: 400px;
         .title {
@@ -15,9 +13,6 @@
             line-height: 40px;
             font-weight: 400;
             box-sizing: border-box;
-            span {
-                padding-left: 18px;
-            }
         }
         .ability {
             display: grid;
@@ -33,9 +28,7 @@
     border: 1px solid black;
 }
 [class^="skill"] {
-    
     box-sizing:border-box;
-    padding: 0 20px;
 }
 [class^="items"] {
     
