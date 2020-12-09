@@ -66,3 +66,9 @@
 
 - Contact hissəsinin yekunlaşması:
   - Form template uygun olaraq yigildi
+
+# Day 09
+
+- Blog_inner page stru qurulması
+- Ümumi sehifenin simetriyasinin tenzimlenmesi
+- Bir çox yerdə tek standart yanaşması tətbiq olundu 
