@@ -1,9 +1,8 @@
 #works {
     height: 850px;
-    display: flex;
     @extend .flex-all-center;
     .title {
-        margin-bottom: 30px;
+        margin-bottom: $title-margin;
         span{
         font-family: 'Kaushan Script', cursive;
         color: #292929;
@@ -15,7 +14,7 @@
     .nav {
         display: flex;
         justify-content: start;
-        margin-bottom: 30px;
+        margin-bottom: $title-margin;
         font-size: 15px;
         color: #999999;
         line-height: 16px;
@@ -26,12 +25,18 @@
         height: 600px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
-        grid-gap: 40px;
+        grid-gap: $grid-gap;
         grid-auto-rows: 270px;
+        
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            
+        }
+        img:hover {
+            transform: scale(1.2);
+            transition: all .3s ease;
         }
     }
 }
@@ -40,4 +45,7 @@
 
 [class^="filter"] {
     padding-left: 25px;
+}
+[class^="work"] {
+    overflow: hidden;
 }

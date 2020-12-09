@@ -1,0 +1,59 @@
+#blog_header {
+  height: 110px;
+  background: url(/img/backround.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#blog_header .blognav {
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#blog_header .blognav .blogleft {
+  width: 650px;
+}
+
+#blog_header .blognav .blogleft a {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  font-style: italic;
+}
+
+#blog_header .blognav .blogright a {
+  font-size: 12px;
+  color: #999999;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  line-height: 14px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  -webkit-box-shadow: inset 0 0 0 #fdd912;
+          box-shadow: inset 0 0 0 #fdd912;
+  text-decoration: none;
+  opacity: 1;
+  outline: none;
+}
+
+#blog_header .blognav .blogright a:hover {
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+  background: #fdd912;
+}

@@ -6,7 +6,7 @@
         width: 1160px;
         height: 580px;
         .title {
-            margin-top: 30px;
+            margin-bottom: $title-margin;
             font-family: 'Kaushan Script', cursive;
             color: #292929;
             font-size: 30px;
@@ -16,7 +16,7 @@
         .blog_examples {
             display: grid;
             grid-template-columns: repeat(3,1fr);
-            grid-gap: 40px;
+            grid-gap: $grid-gap;
             a {
                 font-size: 19px;
                 line-height: 24px;
@@ -37,7 +37,7 @@
             }
         }
         .viewbts {
-            margin-top: 40px;
+            margin-top: $button-margin;
             a {
                 padding: 2px 0 0 0;
                 vertical-align: top;
