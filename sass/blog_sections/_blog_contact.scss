@@ -1,0 +1,71 @@
+#blog_contact {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+    .container {
+        width: 1160px;
+        .title {
+            font-size: 22px;
+            line-height: 24px;
+            margin: 25px 0 30px 0;
+            color: #000;
+            font-weight: bold;
+            font-family: 'Kaushan Script', cursive;
+        }
+        
+        input {
+            width: 100%;
+            height: 48px;
+            font-size: 13px;
+            color: #292929;
+            letter-spacing: -0.045em;
+            font-weight: 500;
+            resize: none;
+            outline: 0;
+            background: none;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        textarea {
+            width: 100%;
+            height: 48px;
+            font-size: 13px;
+            color: #292929;
+            letter-spacing: -0.045em;
+            font-weight: 500;
+            resize: none;
+            outline: 0;
+            background: none;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            margin: 20px 0;
+        }
+        .sbtn a {
+            font-size: 12px;
+            color: #292929;
+            letter-spacing: 0.2em;
+            font-weight: 500;
+            line-height: 12px;
+            text-transform: uppercase;
+            cursor: pointer;
+            box-shadow: inset 0 -6px 0 #fdd912;
+            transition: all 0.3s ease;
+            color: #292929;
+            text-decoration: none;
+            opacity: 1;
+            outline: none;
+            margin-top: 20px;
+        }
+        form {
+            margin-bottom: 40px;
+            a:hover{
+                transition: all 1s ease;
+                background: #fdd912;
+            }
+        }
+        
+    }
+}
