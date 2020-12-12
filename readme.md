@@ -69,6 +69,11 @@
 
 # Day 09
 
-- Blog_inner page stru qurulması
+- Blog_inner page strukturunun qurulması
 - Ümumi sehifenin simetriyasinin tenzimlenmesi
 - Bir çox yerdə tek standart yanaşması tətbiq olundu 
+
+# Day 10
+
+- Blog inner page yekunlaşması
+
