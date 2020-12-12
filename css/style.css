@@ -1,4 +1,6 @@
 #header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 635px;
   background: url("/img/backround-new.png");
   background-size: cover;
@@ -61,40 +63,48 @@
 }
 
 #header .content {
-  height: 348px;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#header .content .hobbies {
-  margin-top: 190px;
-}
-
-#header .content .hobbies ul {
-  height: 100px;
-}
-
-#header .content .hobbies ul li {
-  display: inline-block;
-  padding: 0 20px;
+#header .content .content_items .hobbi_list .hobbi {
   color: white;
   font-weight: 600;
   letter-spacing: -0.045em;
-  font-size: 50px;
+  font-size: 100px;
+  line-height: 100px;
 }
 
-#header .content .media a i {
+#header .content .content_items .media {
+  text-align: center;
+}
+
+#header .content .content_items .media a {
+  text-decoration: none;
+}
+
+#header .content .content_items .media a i {
   padding: 0 10px;
   color: white;
 }
 
-#header .content .arrow {
-  margin-top: 145px;
+#header .arrow {
+  text-align: center;
 }
 
-#header .content .arrow a {
+#header .arrow a {
   height: 40px;
 }
 
-#header .content .arrow a i {
+#header .arrow a i {
   color: white;
   font-size: 24px;
   -webkit-animation: arrow_anim 1s  ease-out 0s infinite;
@@ -188,7 +198,7 @@
 }
 
 #about .row .column1 {
-  height: 460px;
+  height: 420px;
 }
 
 #about .row .column2 h1 {
@@ -560,12 +570,12 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.reset_parameteres, #header .nav .navbar .navbarright ul, #header .content .hobbies ul, #footer .sosials ul, [class^="text"] {
+.reset_parameteres, #header .nav .navbar .navbarright ul, #footer .sosials ul, [class^="text"] {
   margin: 0px;
   padding: 0px;
 }
 
-.flex-all-center, #header .content .hobbies ul, #header .content .media, #header .content .arrow, #footer, #about, #works, #whatido, #blog {
+.flex-all-center, #footer, #about, #works, #whatido, #blog {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

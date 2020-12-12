@@ -77,3 +77,6 @@
 
 - Blog inner page yekunlaşması
 
+# Day 11
+
+- javascript ile template uygun olaraq text slide yaradıldı
