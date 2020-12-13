@@ -80,3 +80,7 @@
 # Day 11
 
 - javascript ile template uygun olaraq text slide yaradıldı
+
+# Day 12
+
+- Works bölməsi üçün modal yaradildi.
