@@ -627,6 +627,14 @@ body {
   transition: all .6s ease 0s;
 }
 
+.works_modal .modal_area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .works_modal .modal_body {
   min-height: 100%;
   display: -webkit-box;
@@ -704,7 +712,5 @@ body {
   cursor: pointer;
   -webkit-box-shadow: inset 0 -6px 0 #fdd912;
           box-shadow: inset 0 -6px 0 #fdd912;
-  -webkit-transition: all 0.9s ease 0s;
-  transition: all 0.9s ease 0s;
   text-decoration: none;
 }

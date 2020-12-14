@@ -88,3 +88,8 @@
 # Day 13
 
 - Main page ozune ve nav menuya scroll efekti verildi
+
+# Day 14
+
+- Multiple ve dinamik modal strukturunun qurulmasi
+- Modal visible oldugu zaman scrol setting teyin edilmesi 

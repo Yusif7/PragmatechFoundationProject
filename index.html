@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
@@ -199,32 +199,33 @@
             </div>
             <div class="work_items">      
                 <div class="work1">
-                    <a href="#nav" id="open_modal">
+                    <!--Modal divin id ile data modal eyni olmalidir -->
+                    <a href="#nav" id="open_modal" data-modal="works_modal">
                         <img src="img/work1.jpg" alt="">
                     </a>
                 </div>
                 <div class="work2">
-                    <a href="mywork2">
+                    <a href="#nav" id="open_modal" data-modal="works_modal1">
                         <img src="img/work2.jpg" alt="">
                     </a>
                 </div>
                 <div class="work3">
-                    <a href="mywork3">
+                    <a href="#nav" id="open_modal" data-modal="works_modal2">
                         <img src="img/work3.jpg" alt="">
                     </a>
                 </div>
                 <div class="work4">
-                    <a href="mywork4">
+                    <a href="#nav" id="open_modal" data-modal="works_modal3">
                         <img src="img/work4.jpg" alt="">
                     </a>
                 </div>
                 <div class="work5">
-                    <a href="mywork5">
+                    <a href="#nav" id="open_modal" data-modal="works_modal4">
                         <img src="img/work5.jpg" alt="">
                     </a>
                 </div>
                 <div class="work6">
-                    <a href="mywork6">
+                    <a href="#nav" id="open_modal" data-modal="works_modal5">
                         <img src="img/work6.jpg" alt="">
                     </a>
                 </div>
@@ -334,7 +335,7 @@
         </div>
         
     </footer>
-    <div id="works_modal" class="works_modal" >
+    <div id="works_modal" class="works_modal">
         <div class="modal_body">
             <div class="modal_content">
                 <a href="#nav" id="modal_close" class="modal_close">
@@ -354,6 +355,107 @@
             </div>
         </div>
     </div>
+    <div id="works_modal1" class="works_modal">
+        <div class="modal_body">
+            <div class="modal_content">
+                <a href="#nav" id="modal_close" class="modal_close">
+                    <i class="fas fa-window-close"></i>
+                </a>
+                <div class="modal_img">
+                    <img src="img/work2.jpg" alt="">
+                </div>
+                <div class="modal_text">
+                    <div class="prtype">
+                        Branding
+                    </div>
+                    <div class="title">Hanging Wall Sign</div>
+                    <p>The freebie of the day is a logo design kit with an original theme that will help you create stunning mountain bike related logos in just minutes.</p>    
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="works_modal2" class="works_modal">
+        <div class="modal_body">
+            <div class="modal_content">
+                <a href="#nav" id="modal_close" class="modal_close">
+                    <i class="fas fa-window-close"></i>
+                </a>
+                <div class="modal_img">
+                    <img src="img/work3.jpg" alt="">
+                </div>
+                <div class="modal_text">
+                    <div class="prtype">
+                        Mockups
+                    </div>
+                    <div class="title">Realistic Business Cards</div>
+                    <p>Today we’re happy to share with you the mockup of a classic notebook that will help you showcase your drawings. Today we’re happy to share with you the mockup of a classic notebook that will help.</p>    
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="works_modal3" class="works_modal">
+        <div class="modal_body">
+            <div class="modal_content">
+                <a href="#nav" id="modal_close" class="modal_close">
+                    <i class="fas fa-window-close"></i>
+                </a>
+                <div class="modal_img">
+                    <img src="img/work4.jpg" alt="">
+                </div>
+                <div class="modal_text">
+                    <div class="prtype">
+                        Branding
+                    </div>
+                    <div class="title">Juice Bottle Packaging</div>
+                    <p>Today we have for you a set of 20 icons available in 2 styles: colored flat and line version, designed on a 128px grid. These polished icons come in multiple formats so you can easily include them in your projects.</p>    
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="works_modal4" class="works_modal">
+        <div class="modal_body">
+            <div class="modal_content">
+                <a href="#nav" id="modal_close" class="modal_close">
+                    <i class="fas fa-window-close"></i>
+                </a>
+                <div class="modal_img">
+                    <img src="img/work5.jpg" alt="">
+                </div>
+                <div class="modal_text">
+                    <div class="prtype">
+                        Photography
+                    </div>
+                    <div class="title">Mug PSD MockUp</div>
+                    <p>Mapogo is an expertly crafted UI kit perfect for iOS designers and developers. The free sample includes 10 screens (750×1334 px) that can be easily customized in Photoshop</p>    
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="works_modal5" class="works_modal">
+        <div class="modal_body">
+            <div class="modal_content">
+                <a href="#nav" id="modal_close" class="modal_close">
+                    <i class="fas fa-window-close"></i>
+                </a>
+                <div class="modal_img">
+                    <img src="img/work6.jpg" alt="">
+                </div>
+                <div class="modal_text">
+                    <div class="prtype">
+                        UI Kits
+                    </div>
+                    <div class="title">A4 Paper PSD</div>
+                    <p>The freebie of the day is Chameleon, a modern UI kit perfect to use for creating a stylish and clean mobile app. This kit includes 10 screens from various categories that can be easily edited.</p>    
+                    <a href="#">View Project</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <script src="javascript/js.js"></script>
 </body>
 </html>

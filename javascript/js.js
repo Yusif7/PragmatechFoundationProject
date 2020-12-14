@@ -18,24 +18,37 @@ i = 0
 
 
 //  WORKS SECTION MODALS
-let close = document.getElementById("modal_close");
-let modal = document.getElementById("works_modal");
-let open = document.getElementById("open_modal");
 
-
-open.onclick = function() {openFunction()};
-function openFunction() {
-modal.setAttribute("style","opacity: 1; visibility: visible;");
-}
-close.onclick = function() {closeFunction()};
-function closeFunction() {
-modal.setAttribute("style","opacity: 0; visibility: hidden;");
-}
+let modalsref = document.querySelectorAll("#open_modal");
+let html = document.querySelector("#html");
+html.className
+// #open_modal id olan taglarin bir bir gotur
+modalsref.forEach(function(ref){
+    // Eger her hansi birine click olacaqsa
+    ref.onclick = function(){
+        // Hemin tagin data-modal atributunu cagir
+        let modal = ref.getAttribute("data-modal");
+        //Hemin tag stil teyin et
+        document.getElementById(modal).setAttribute("style","opacity: 1; visibility: visible;");
+        // Kenarda iki dene scroll olmasin deye modal acilanda sehife scrol olmasin
+        html.setAttribute("style", "overflow: hidden;");
+    }
+    
+});
+//Baglanma icon teyin edilsin
+let closeref = document.querySelectorAll("#modal_close");
+closeref.forEach(function(ref){
+    ref.onclick = function(){
+        // Works_modal classli parent tap ve style teyin et 
+        let modal = (ref.closest(".works_modal").setAttribute("style","opacity: 0; visibility: hidden;"));
+        //sehife scroll geri qaytar
+        html.setAttribute("style", "overflow: scroll;");
+    }
+    
+});
+// Bu niye islemir ozumde bilmirem her seyi duzdu ama islemir nerviden partliyiram , derdini tapsaz mene deyin zehmet olmasa 
 window.onclick = function(event){
-if (event.target == modal){
-modal.setAttribute("style","display: none;");
-}
-}
-
-// PAGE SCROLL
-
+    if (event.target.className === ".works_modal"){
+        event.target.setAttribute("style","opacity: 0; visibility: hidden;");
+    }
+};
