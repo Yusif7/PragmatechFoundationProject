@@ -309,6 +309,10 @@
   margin-bottom: 40px;
 }
 
+#blog_contact .container form a {
+  display: inline-block;
+}
+
 #blog_contact .container form a:hover {
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
@@ -368,6 +372,11 @@
   -webkit-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
   text-align: center;
+}
+
+html {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 body {

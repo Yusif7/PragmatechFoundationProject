@@ -84,3 +84,7 @@
 # Day 12
 
 - Works bölməsi üçün modal yaradildi.
+
+# Day 13
+
+- Main page ozune ve nav menuya scroll efekti verildi
