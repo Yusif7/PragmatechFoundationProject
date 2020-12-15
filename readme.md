@@ -93,3 +93,10 @@
 
 - Multiple ve dinamik modal strukturunun qurulmasi
 - Modal visible oldugu zaman scrol setting teyin edilmesi 
+
+# Day 15
+
+- Navbar settings template uygun olaraq teyin olundu
+  - Scroll zamani menu yaranmasi
+  - Nav background-color deyismesi
+  - Logo color deyismesi

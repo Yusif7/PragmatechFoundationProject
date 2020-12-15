@@ -48,7 +48,29 @@ closeref.forEach(function(ref){
 });
 // Bu niye islemir ozumde bilmirem her seyi duzdu ama islemir nerviden partliyiram , derdini tapsaz mene deyin zehmet olmasa 
 window.onclick = function(event){
-    if (event.target.className === ".works_modal"){
+    if (event.target.className === '.works_modal'){
         event.target.setAttribute("style","opacity: 0; visibility: hidden;");
     }
 };
+
+// Menu settings
+//Deyisim olan variable yaradildi
+let navbarright = document.querySelector('.navbarright');
+let nav = document.querySelector('.nav');
+let logo = document.querySelector('.logo')
+
+// Ekran surusmesi funksiyasi teyin olundu
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    // Body taga scroll px teyin olundu
+if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+navbarright.style.visibility = "visible";
+nav.style.background = "white";
+logo.style.color = "black";
+} else {
+navbarright.style.visibility = "hidden";
+nav.style.background = '';
+logo.style.color = "white";
+}
+}
