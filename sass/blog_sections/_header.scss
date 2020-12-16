@@ -5,6 +5,11 @@
     background-repeat: no-repeat;
     background-size:cover;
     box-sizing:border-box;
+    .nav{
+        position: fixed;
+        width: 100%;
+        transition: all 0.8s ease 0s;
+    }
     .blognav {
         height: 110px;
         width: 1160px;
@@ -23,11 +28,14 @@
                 color:white;
                 text-decoration: none;
                 font-style: italic;
+                transition: all 0.8s ease 0s;
             }
         }
         .blogright {
             width: 580px;
             text-align: end;
+            visibility: hidden;
+            transition: all 0.8s ease 0s;
             a {
                 font-size: 12px;
                 color: #999999;

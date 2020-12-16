@@ -100,3 +100,8 @@
   - Scroll zamani menu yaranmasi
   - Nav background-color deyismesi
   - Logo color deyismesi
+
+# Day 16
+
+- Blog inner page menusu template uygun olaraq dinamik şəkildə düzəldi
+- Blog inner scroll funksiyasi elave olundu

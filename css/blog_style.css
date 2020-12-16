@@ -8,6 +8,13 @@
           box-sizing: border-box;
 }
 
+#blog_header .nav {
+  position: fixed;
+  width: 100%;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
+}
+
 #blog_header .blognav {
   height: 110px;
   width: 1160px;
@@ -37,11 +44,16 @@
   color: white;
   text-decoration: none;
   font-style: italic;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 #blog_header .blognav .blogright {
   width: 580px;
   text-align: end;
+  visibility: hidden;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 #blog_header .blognav .blogright a {

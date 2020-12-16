@@ -14,7 +14,9 @@ i++;
 if(i == slidelist.length){
 i = 0
 }
-},3000);
+},2500);
+
+
 
 
 //  WORKS SECTION MODALS
@@ -52,6 +54,10 @@ window.onclick = function(event){
         event.target.setAttribute("style","opacity: 0; visibility: hidden;");
     }
 };
+
+
+
+
 
 // Menu settings
 //Deyisim olan variable yaradildi
