@@ -105,3 +105,6 @@
 
 - Blog inner page menusu template uygun olaraq dinamik şəkildə düzəldi
 - Blog inner scroll funksiyasi elave olundu
+ ## Day 16 əlavə
+  - Blog inner dinamik modal sistemi quruldu
+  - Modal daxilinde button ve img goruntusu yaradildi
