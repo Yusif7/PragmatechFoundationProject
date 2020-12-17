@@ -108,3 +108,8 @@
  ## Day 16 əlavə
   - Blog inner dinamik modal sistemi quruldu
   - Modal daxilinde button ve img goruntusu yaradildi
+
+# Day 17
+
+- Preloader yaradildi
+  - Funksiyonal ucun JS istifade edildi

@@ -5,7 +5,9 @@ let slidelist = ['DEVELOPER', 'CODER', 'GAMER', 'PROGRAMMER', 'FREELANCER', 'ANA
 //select needed div
 let hobbies = document.querySelector('.hobbi');
 // Calc
-let i = 0;
+let i = 1;
+//Display gorsenen element
+hobbies.innerHTML = slidelist[0];
 // Show time 
 window.setInterval(function(){
 hobbies.innerHTML = slidelist[i];
@@ -48,10 +50,12 @@ closeref.forEach(function(ref){
     }
     
 });
+let wmodals = document.querySelectorAll(".works_modal")
+
 // Bu niye islemir ozumde bilmirem her seyi duzdu ama islemir nerviden partliyiram , derdini tapsaz mene deyin zehmet olmasa 
 window.onclick = function(event){
-    if (event.target.className === '.works_modal'){
-        event.target.setAttribute("style","opacity: 0; visibility: hidden;");
+    if (event.target == wmodals){
+        wmodals.target.setAttribute("style","opacity: 0; visibility: hidden;");
     }
 };
 
@@ -79,4 +83,21 @@ navbarright.style.visibility = "hidden";
 nav.style.background = '';
 logo.style.color = "white";
 }
+}
+
+
+
+// PRELOADER 
+// Body tag funksiya teyin olunur
+document.body.onload = function(){
+    //Funksiyanin isleme araligi teyin olunur
+    setTimeout(function(){
+        //Preloade tag secilir
+        let preloader = document.querySelector("#preloader");
+        // Eger preloader taginda done class teyin olunmayibsa
+        if (!preloader.classList.contains("done")){
+            // Done classinin preloader tagina elave et
+            preloader.classList.add("done");
+        }
+    },1000)
 }
