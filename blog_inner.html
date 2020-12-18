@@ -5,6 +5,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <title>Document</title>
 </head>
 <body>
@@ -47,17 +48,17 @@
             </div>
             <div class="blog_works">
                 <div class="blog_work1">
-                    <a href="#nav" id="open_modal" data-modal="blog_modal">
-                        <img src="img/work1.jpg" alt="">
+                    <a href="img/blog-work1.jpg" id="open_modal" data-modal="blog_modal" data-lightbox="lbox">
+                        <img src="img/work1.jpg" alt="img1">
                     </a>
                 </div>
                 <div class="blog_work2">
-                    <a href="#nav" id="open_modal" data-modal="blog_modal1">
+                    <a href="img/blog-work2.jpg" id="open_modal" data-modal="blog_modal1" data-lightbox="lbox">
                         <img src="img/work2.jpg" alt="">
                     </a>
                 </div>
                 <div class="blog_work3">
-                    <a href="#nav" id="open_modal" data-modal="blog_modal2">
+                    <a href="img/blog-work3.jpg" id="open_modal" data-modal="blog_modal2" data-lightbox="lbox">
                         <img src="img/work3.jpg" alt="">
                     </a>
                 </div>
@@ -168,63 +169,7 @@
             
         </footer>
     </section>
-    <div id="blog_modal" class="blog_modal">
-        <div class="modal_body">
-            <div class="modal_content">
-                <div class="prev arrow">
-                    <i class="fas fa-caret-left"></i>
-                </div>
-                <div class="center">
-                    <div class="close_modal" id="close_modal">x</div>
-                    <div class="image">
-                        <a href="#nav"><img src="img/work1.jpg" alt=""></a>
-                    </div>
-                    <div class="img_count">1.2.3</div>
-                </div>
-                <div class="next arrow">
-                    <i class="fas fa-caret-right"></i>
-                </div>  
-            </div>
-        </div>
-    </div>
-    <div id="blog_modal1" class="blog_modal">
-        <div class="modal_body">
-            <div class="modal_content">
-                <div class="prev arrow">
-                    <i class="fas fa-caret-left"></i>
-                </div>
-                <div class="center">
-                    <div class="close_modal" id="close_modal">x</div>
-                    <div class="image">
-                        <a href="#nav"><img src="img/work2.jpg" alt=""></a>
-                    </div>
-                    <div class="img_count">1.2.3</div>
-                </div>
-                <div class="next arrow">
-                    <i class="fas fa-caret-right"></i>
-                </div>  
-            </div>
-        </div>
-    </div>
-    <div id="blog_modal2" class="blog_modal">
-        <div class="modal_body">
-            <div class="modal_content">
-                <div class="prev arrow">
-                    <i class="fas fa-caret-left"></i>
-                </div>
-                <div class="center">
-                    <div class="close_modal" id="close_modal">x</div>
-                    <div class="image">
-                        <a href="#nav"><img src="img/work3.jpg" alt=""></a>
-                    </div>
-                    <div class="img_count">1.2.3</div>
-                </div>
-                <div class="next arrow">
-                    <i class="fas fa-caret-right"></i>
-                </div>  
-            </div>
-        </div>
-    </div>
     <script src="javascript/blog_js.js"></script>
+    <script src="javascript/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

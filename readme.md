@@ -113,3 +113,6 @@
 
 - Preloader yaradildi
   - Funksiyonal ucun JS istifade edildi
+
+# Day 18 
+- Blog inner page ucun lightbox yaradildi

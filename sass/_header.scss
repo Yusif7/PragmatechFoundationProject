@@ -6,17 +6,19 @@
     background-size: cover;
     // header icinde oldugu ucun nested style istifade edildi
     .nav {
-        //background-color: rgba(0,0,0,0.1);
         width: 100%;
         position: fixed;
         transition: all 0.8s ease 0s;
+        display: flex;
+        justify-content: center;
         .navbar {
-            padding: 20px 93px;
+            width: 1160px;
+            text-align: center;
+            padding: 20px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
             .navbarleft { 
-                width: 120px;
                 display: inline-block;
                 a {
                     display: inline-block;
@@ -45,7 +47,7 @@
                         line-height: 14px;
                         letter-spacing: 0.1em;
                         font-weight: 500;
-                        margin: 0 18px;
+                        margin: 0 20px;
                     }
                     a:hover {
                         display: inline-block;
@@ -57,12 +59,12 @@
     }
     // header section middle content
     .content {
-        height: 550px;
+        height: 450px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         .content_items{
-            padding-top: 100px;
+            padding-bottom: 60px;
             .hobbi_list {
                 .hobbi{
                     color:$text-color;
@@ -89,6 +91,7 @@
     }
     .arrow {
         text-align: center;
+        margin-top: 60px;
         a {
             height: 40px;
         }
