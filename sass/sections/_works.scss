@@ -2,7 +2,6 @@
     height: 850px;
     @extend .flex-all-center;
     .title {
-        margin-bottom: $title-margin;
         span{
         font-family: 'Kaushan Script', cursive;
         color: #292929;
@@ -14,11 +13,11 @@
     .allFilters {
         display: flex;
         justify-content: start;
-        margin-bottom: $title-margin;
         font-size: 15px;
         color: #999999;
         line-height: 16px;
         cursor: pointer;
+        margin: 40px 0;
         .filterall {
             padding-left: 0;
         }
@@ -44,10 +43,6 @@
         .hide {
             display: none;
         }
-        .anime {
-            transform: scale(0);
-            opacity: 0;
-        }
     }
     
 }
@@ -55,7 +50,7 @@
 
 
 [class^="filter"] {
-    padding-left: 25px;
+    padding-left: 40px;
 }
 [class^="work"] {
     overflow: hidden;

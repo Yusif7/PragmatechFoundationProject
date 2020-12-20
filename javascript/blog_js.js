@@ -1,5 +1,5 @@
 // Blog Menu settings
-let blogright = document.querySelector('.blogright');
+let blogright = document.querySelector('.blog_right');
 let nav = document.querySelector('.nav');
 let logo = document.querySelector('.logo');
 let rightref = document.querySelector(".back");

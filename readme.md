@@ -121,3 +121,4 @@
 # Day 19
 
 - Works section contetn filter tetbiq olundu
+- Padding və margin dəyərləri yuvarlanaraq tam rəqəm olaraq standart halına gətirildi

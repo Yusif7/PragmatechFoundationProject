@@ -19,7 +19,7 @@
           justify-content: center;
 }
 
-#header .nav .navbar {
+#header .nav .navBar {
   width: 1160px;
   text-align: center;
   padding: 20px 0;
@@ -34,11 +34,11 @@
           align-items: center;
 }
 
-#header .nav .navbar .navbarleft {
+#header .nav .navBar .navBarLeft {
   display: inline-block;
 }
 
-#header .nav .navbar .navbarleft a {
+#header .nav .navBar .navBarLeft a {
   display: inline-block;
   font-family: 'Kaushan Script', cursive;
   font-size: 32px;
@@ -49,15 +49,15 @@
   font-style: italic;
 }
 
-#header .nav .navbar .navbarright {
+#header .nav .navBar .navBarRight {
   visibility: hidden;
 }
 
-#header .nav .navbar .navbarright ul li {
+#header .nav .navBar .navBarRight ul li {
   display: inline-block;
 }
 
-#header .nav .navbar .navbarright ul a {
+#header .nav .navBar .navBarRight ul a {
   text-decoration: none;
   color: #999999;
   font-size: 12px;
@@ -67,7 +67,7 @@
   margin: 0 20px;
 }
 
-#header .nav .navbar .navbarright ul a:hover {
+#header .nav .navBar .navBarRight ul a:hover {
   display: inline-block;
   -webkit-box-shadow: inset 0 -6px 0 #fdd912;
           box-shadow: inset 0 -6px 0 #fdd912;
@@ -165,7 +165,7 @@
 #footer .sosials ul li {
   display: inline-block;
   border: 1px solid #ccc;
-  margin: 0 5px;
+  margin: 0 10px;
   text-align: center;
   height: 42px;
   width: 42px;
@@ -177,14 +177,11 @@
 }
 
 #footer .sosials a {
-  margin-top: 130px;
-  margin: 0 6px;
   overflow: hidden;
   width: 42px;
   height: 42px;
   line-height: 42px;
   text-align: center;
-  margin: 0 6px;
   overflow: hidden;
   text-align: center;
   -webkit-transition: all 0.4s ease 0s;
@@ -221,32 +218,36 @@
   height: 420px;
 }
 
+#about .row .column2 .column2-text {
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 20px 20px;
+}
+
 #about .row .column2 h1 {
   font-family: 'Kaushan Script', cursive;
-  margin: 28px 0;
   font-weight: 400;
   color: #292929;
   font-size: 44px;
   line-height: 56px;
-  padding-left: 40px;
+  margin: 0;
 }
 
 #about .row .column2 p {
   font-family: 'Poppins', sans-serif;
   font-size: 15px;
-  color: #898989;
   background: white;
   line-height: 25px;
   letter-spacing: 0.03em;
   font-weight: 300;
-  padding-left: 40px;
+  margin: 2em 0;
 }
 
 #about .row .column2 .btn {
-  margin-top: 40px;
   width: 155px;
   height: 14px;
-  padding-left: 40px;
 }
 
 #about .row .column2 .btn a:hover {
@@ -276,10 +277,6 @@
   height: 850px;
 }
 
-#works .title {
-  margin-bottom: 30px;
-}
-
 #works .title span {
   font-family: 'Kaushan Script', cursive;
   color: #292929;
@@ -295,11 +292,11 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
-  margin-bottom: 30px;
   font-size: 15px;
   color: #999999;
   line-height: 16px;
   cursor: pointer;
+  margin: 40px 0;
 }
 
 #works .allFilters .filterall {
@@ -335,14 +332,8 @@
   display: none;
 }
 
-#works .work_items .anime {
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  opacity: 0;
-}
-
 [class^="filter"] {
-  padding-left: 25px;
+  padding-left: 40px;
 }
 
 [class^="work"] {
@@ -435,7 +426,7 @@
 }
 
 #blog .container .title {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   font-family: 'Kaushan Script', cursive;
   color: #292929;
   font-size: 30px;
@@ -457,11 +448,9 @@
   font-weight: 500;
   color: #292929;
   height: 24px;
-  padding-left: 4px;
 }
 
 #blog .container .blog_examples p {
-  padding-left: 5px;
   font-size: 14px;
   line-height: 24px;
   color: #999999;
@@ -522,7 +511,7 @@
 }
 
 #contact .container .title {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 #contact .container .title span {
@@ -610,11 +599,10 @@ html {
 body {
   margin: 0px;
   font-family: 'Poppins', sans-serif;
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
+  color: #898989;
 }
 
-.reset_parameteres, #header .nav .navbar .navbarright ul, #footer .sosials ul, [class^="text"] {
+.reset_parameteres, #header .nav .navBar .navBarRight ul, #footer .sosials ul, [class^="text"] {
   margin: 0px;
   padding: 0px;
 }

@@ -65,7 +65,7 @@ window.onclick = function(event){
 
 // Menu settings
 //Deyisim olan variable yaradildi
-let navbarright = document.querySelector('.navbarright');
+let navbarright = document.querySelector('.navBarRight');
 let nav = document.querySelector('.nav');
 let logo = document.querySelector('.logo')
 

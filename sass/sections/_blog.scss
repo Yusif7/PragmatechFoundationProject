@@ -6,7 +6,7 @@
         width: 1160px;
         height: 580px;
         .title {
-            margin-bottom: $title-margin;
+            margin-bottom: 40px;
             font-family: 'Kaushan Script', cursive;
             color: #292929;
             font-size: 30px;
@@ -24,10 +24,8 @@
                 color: #292929;
                 height: 24px;
                 @extend .a-type;
-                padding-left: 4px;
             }
             p {
-                padding-left: 5px;
                 font-size: 14px;
                 line-height: 24px;
                 color: #999999;

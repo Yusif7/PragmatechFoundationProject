@@ -10,7 +10,7 @@
         width: 100%;
         transition: all 0.8s ease 0s;
     }
-    .blognav {
+    .blog_nav {
         height: 110px;
         width: 1160px;
         display: flex;
@@ -18,7 +18,7 @@
         align-items: center;
         box-sizing: border-box;
         margin: 0 auto;
-        .blogleft {
+        .blog_left {
             width: 580px;
             a {
                 font-family: 'Kaushan Script', cursive;
@@ -31,7 +31,7 @@
                 transition: all 0.8s ease 0s;
             }
         }
-        .blogright {
+        .blog_right {
             width: 580px;
             text-align: end;
             visibility: hidden;
