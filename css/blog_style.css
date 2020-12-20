@@ -392,6 +392,8 @@ html {
 body {
   margin: 0px;
   font-family: 'Poppins', sans-serif;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 .reset_parameteres, #blog_footer #footer .sosials ul {
@@ -508,8 +510,8 @@ body {
 }
 
 .preloader .loader {
-  width: 75px;
-  height: 75px;
+  width: 40px;
+  height: 40px;
   border: 10px solid lightgray;
   border-radius: 50%;
   border-top-color: yellow;

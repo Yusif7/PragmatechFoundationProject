@@ -1,10 +1,12 @@
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
+    
 }
 body {
     margin: 0px;
     font-family: 'Poppins', sans-serif;
+    transition: all 0.8s ease 0s;
 }
 
 .reset_parameteres {

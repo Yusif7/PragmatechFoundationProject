@@ -99,5 +99,46 @@ document.body.onload = function(){
             // Done classinin preloader tagina elave et
             preloader.classList.add("done");
         }
-    },1000)
+    },700)
 }
+
+
+
+// Work image filter
+function app(){
+    const filterName = document.querySelectorAll(".filter1");
+    const filterContent = document.querySelectorAll(".works");
+    // Work ve content deyerini gebul eden funksiyanin yazilmasi
+    function filter (work, items) {
+        // Content daxiline giririk
+        items.forEach(item => {
+            // Content terkibinde is filterNamede olan klass var mi?
+            const isItemFiltered = item.classList.contains(work);
+            // Hamisini gosteren class 
+            const showAll = work.toLowerCase() === "all";
+            //Eger content filterNamede klassina beraberdise hide klassinin sil
+            if (isItemFiltered){
+                item.classList.remove("hide")
+                // Eger beraber deyilse hide klasini elave et
+            }else{
+                item.classList.add("hide")
+            }
+            // Eger filterName all secilibse hide hamisindan sil
+            if (showAll){
+                item.classList.remove("hide")
+            }
+
+        })
+    }
+    // Is kategoriyalari arasinda gir
+    filterName.forEach(name => {
+        name.addEventListener("click", function(){
+            // Kategoriyalar daxilinde yaradilan data-filter klassinin deyerini gotur 
+            const currentWork = name.dataset.filter;
+            //Filter funksiyasinin tetbiq et
+            filter(currentWork, filterContent);
+        })
+    })
+}
+// Umumi funksiyani cagir
+app()

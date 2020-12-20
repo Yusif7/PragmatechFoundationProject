@@ -11,7 +11,7 @@
         font-weight: 400;
         }
     }
-    .nav {
+    .allFilters {
         display: flex;
         justify-content: start;
         margin-bottom: $title-margin;
@@ -19,6 +19,9 @@
         color: #999999;
         line-height: 16px;
         cursor: pointer;
+        .filterall {
+            padding-left: 0;
+        }
     }
     .work_items {
         width: 1160px;
@@ -38,7 +41,15 @@
             transform: scale(1.2);
             transition: all .3s ease;
         }
+        .hide {
+            display: none;
+        }
+        .anime {
+            transform: scale(0);
+            opacity: 0;
+        }
     }
+    
 }
 
 

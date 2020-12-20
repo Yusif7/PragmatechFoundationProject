@@ -115,4 +115,9 @@
   - Funksiyonal ucun JS istifade edildi
 
 # Day 18 
+
 - Blog inner page ucun lightbox yaradildi
+
+# Day 19
+
+- Works section contetn filter tetbiq olundu
