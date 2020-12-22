@@ -1,10 +1,13 @@
 #about {
-    width: 100%;
-    height: 635px;
+    .container{
+        width: 100%;
+    //height: 635px;
     @extend .flex-all-center;
     color: $about-color;
+    }
     .row {
-        width: 1160px;
+        @extend .innerBlokCenter;
+        width: $inner_blok_width;
         height: 420px;
         display: grid;
         grid-template-columns: 30% 70%;

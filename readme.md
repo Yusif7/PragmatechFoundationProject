@@ -84,24 +84,21 @@
 # Day 12
 
 - Works bölməsi üçün modal yaradildi.
-
-# Day 13
-
 - Main page ozune ve nav menuya scroll efekti verildi
 
-# Day 14
+# Day 13
 
 - Multiple ve dinamik modal strukturunun qurulmasi
 - Modal visible oldugu zaman scrol setting teyin edilmesi 
 
-# Day 15
+# Day 14
 
 - Navbar settings template uygun olaraq teyin olundu
   - Scroll zamani menu yaranmasi
   - Nav background-color deyismesi
   - Logo color deyismesi
 
-# Day 16
+# Day 15
 
 - Blog inner page menusu template uygun olaraq dinamik şəkildə düzəldi
 - Blog inner scroll funksiyasi elave olundu
@@ -109,16 +106,18 @@
   - Blog inner dinamik modal sistemi quruldu
   - Modal daxilinde button ve img goruntusu yaradildi
 
-# Day 17
+# Day 16
 
 - Preloader yaradildi
   - Funksiyonal ucun JS istifade edildi
+  - Blog inner page ucun lightbox yaradildi
 
-# Day 18 
-
-- Blog inner page ucun lightbox yaradildi
-
-# Day 19
+# Day 17
 
 - Works section contetn filter tetbiq olundu
 - Padding və margin dəyərləri yuvarlanaraq tam rəqəm olaraq standart halına gətirildi
+
+# Day 18
+
+- Works section contetn filter daha dinamik hala getirildi
+- Ümumi optimalaşdırma işləri (Lazim olmayan spacing deyerleri aradan qaldirildi)

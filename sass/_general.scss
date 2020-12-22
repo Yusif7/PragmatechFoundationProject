@@ -1,12 +1,11 @@
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
-    
 }
 body {
     margin: 0px;
     font-family: 'Poppins', sans-serif;
-    color: $about-color;
+    box-sizing:border-box;
 }
 
 .reset_parameteres {
@@ -28,4 +27,8 @@ body {
 .a-type {
     text-decoration: none;
     outline: none;
+}
+
+.innerBlokCenter {
+    margin: 7em auto;
 }

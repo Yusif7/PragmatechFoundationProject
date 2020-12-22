@@ -1,12 +1,14 @@
 #blog {
-    height:850px;
+    //height:850px;
     background: #f9f9f9;
     @extend .flex-all-center;
     .container {    
-        width: 1160px;
+        width: $inner_blok_width;
         height: 580px;
+        @extend .innerBlokCenter;
         .title {
-            margin-bottom: 40px;
+            //margin-bottom: 40px;
+            @extend .mb-4;
             font-family: 'Kaushan Script', cursive;
             color: #292929;
             font-size: 30px;
@@ -35,7 +37,8 @@
             }
         }
         .viewbts {
-            margin-top: $button-margin;
+            //margin-top: $button-margin;
+            @extend .mt-4;
             a {
                 display: inline-block;
                 padding: 2px 0 0 0;
@@ -65,6 +68,7 @@
     font-size: 12px;
     font-weight: 400;
     color: #b9b9b9;
-    margin-top: 20px;
+    //margin-top: 20px;
+    @extend .mt-2;
 }
 

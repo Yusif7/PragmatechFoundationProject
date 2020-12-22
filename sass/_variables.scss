@@ -5,3 +5,62 @@ $about-text-color:#292929;
 $title-margin: 30px;
 $button-margin: 40px;
 $grid-gap: 40px;
+$inner_blok_width:1160px;
+
+
+// spacing
+$spacing-1x:10px;
+$spacing-2x:$spacing-1x*2;
+$spacing-3x:$spacing-1x*3;
+$spacing-4x:$spacing-1x*4;
+
+// Margins
+// General Margin
+@for $i from 1 through 6 {
+    .m-#{$i} {
+        margin: $spacing-1x*$i
+    }
+    .mt-#{$i} {
+        margin-top: $spacing-1x*$i
+    }
+    .mb-#{$i} {
+        margin-bottom: $spacing-1x*$i
+    }
+    .ml-#{$i} {
+        margin-left: $spacing-1x*$i
+    }
+    .mr-#{$i} {
+        margin-right: $spacing-1x*$i
+    }
+    .mx-#{$i} {
+        margin: 0px $spacing-1x*$i
+    }
+    .my-#{$i} {
+        margin: $spacing-1x*$i 0px;
+    }
+}
+
+// padding 
+@for $i from 1 through 6 {
+    .p-#{$i} {
+        padding: $spacing-1x*$i
+    }
+    .pt-#{$i} {
+        padding-top: $spacing-1x*$i
+    }
+    .pb-#{$i} {
+        padding-bottom: $spacing-1x*$i
+    }
+    .pl-#{$i} {
+        padding-left: $spacing-1x*$i
+    }
+    .pr-#{$i} {
+        padding-right: $spacing-1x*$i
+    }
+    .px-#{$i} {
+        padding: 0px $spacing-1x*$i !important
+    }
+    .py-#{$i} {
+        padding: $spacing-1x*$i 0px !important;
+    }
+}

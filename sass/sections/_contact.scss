@@ -1,13 +1,13 @@
 #contact {
-    height: 620px;
-    display: flex;
-    justify-content: center;
-    align-items:center;
+    //height: 620px;
+    @extend .flex-all-center;
     .container {
-        width: 1160px;
+        width: $inner_blok_width;
         height: 390px;
+        @extend .innerBlokCenter;
         .title {
-            margin-bottom: 40px;
+            //margin-bottom: 40px;
+            @extend .mb-4;
             span {
                 font-family: 'Kaushan Script', cursive;
                 color: #292929;

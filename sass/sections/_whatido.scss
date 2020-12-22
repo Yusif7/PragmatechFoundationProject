@@ -1,11 +1,12 @@
 #whatido {
-    height: 635px;
+    //height: 635px;
     background: #f9f9f9;
     box-sizing: border-box;
     @extend .flex-all-center;
     .container {
-        width: 1160px;
+        width: $inner_blok_width;
         height: 400px;
+        @extend .innerBlokCenter;
         .title {
             font-family: 'Kaushan Script', cursive;
             color: $about-text-color;
@@ -31,12 +32,11 @@
     box-sizing:border-box;
 }
 [class^="items"] {
-    
     box-sizing:border-box;
-    margin-top: $title-margin;
+    //margin-top: $title-margin;
+    @extend .mt-3;
 }
 [class^="icon"] {
-    
     box-sizing:border-box;
     width: 360px;
     height: 48px;
@@ -45,9 +45,9 @@
     color: #fdd912;
 }
 [class^="name"] {
-    
     box-sizing:border-box;
-    margin: 10px 0;
+    //margin: 10px 0;
+    @extend .my-1;
     font-size: 13px;
     color: #292929;
     letter-spacing: 0.1em;
@@ -56,7 +56,6 @@
 }
 
 [class^="text"] {
-    
     box-sizing: border-box;
     font-size: 13px;
     line-height: 22px;

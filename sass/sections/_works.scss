@@ -1,6 +1,10 @@
 #works {
-    height: 850px;
+    //height: 850px;
     @extend .flex-all-center;
+    width: 100vw;
+    .container{
+        @extend .innerBlokCenter;
+    }
     .title {
         span{
         font-family: 'Kaushan Script', cursive;
@@ -17,28 +21,34 @@
         color: #999999;
         line-height: 16px;
         cursor: pointer;
-        margin: 40px 0;
+        //margin: 40px 0;
+        @extend .my-4;
         .filterall {
             padding-left: 0;
         }
     }
     .work_items {
-        width: 1160px;
+        width: $inner_blok_width;
         height: 600px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         grid-gap: $grid-gap;
         grid-auto-rows: 270px;
+        transition: all 0.8s ease 0s;
         
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            
         }
         img:hover {
             transform: scale(1.2);
-            transition: all .3s ease;
+            transition: all .5s ease;
+        }
+        .anime {
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.3s ease 0s;
         }
         .hide {
             display: none;
@@ -50,8 +60,10 @@
 
 
 [class^="filter"] {
-    padding-left: 40px;
+    //padding-left: 40px;
+    @extend .pl-4;
 }
 [class^="work"] {
     overflow: hidden;
+    transition: all 0.8s ease 0s;
 }

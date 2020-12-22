@@ -118,19 +118,22 @@ function app(){
             const showAll = work.toLowerCase() === "all";
             //Eger content filterNamede klassina beraberdise hide klassinin sil
             if (isItemFiltered){
+                item.classList.remove("anime")
                 item.classList.remove("hide")
                 // Eger beraber deyilse hide klasini elave et
             }else{
-                item.classList.add("hide")
+                item.classList.add("anime")
             }
             // Eger filterName all secilibse hide hamisindan sil
             if (showAll){
+                item.classList.remove("anime")
                 item.classList.remove("hide")
+                item.setAttribute("style", "transition:all 0.5s ease 0s;")
             }
 
         })
     }
-    // Is kategoriyalari arasinda gir
+    // Is kategoriyalari
     filterName.forEach(name => {
         name.addEventListener("click", function(){
             // Kategoriyalar daxilinde yaradilan data-filter klassinin deyerini gotur 
@@ -138,6 +141,16 @@ function app(){
             //Filter funksiyasinin tetbiq et
             filter(currentWork, filterContent);
         })
+    })
+    // Animasiyadan sonra yeniden strukturun qurulmasi
+    filterContent.forEach(content => {
+        // Visible hidden olandan sonra animasiya seklinde
+        content.ontransitionend = function(){
+            // Anime klassi tetbiq edilenden sonra check et eger obyektde anime klassi varsa ona hide klassini elave et
+            if(content.classList.contains("anime")){
+                content.classList.add("hide")
+            }
+        }
     })
 }
 // Umumi funksiyani cagir

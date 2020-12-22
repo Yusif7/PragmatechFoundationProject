@@ -1,15 +1,17 @@
 #footer {
-    height: 260px;
+    //height: 260px;
     background: #f9f9f9;
     box-sizing: border-box;
     @extend .flex-all-center;
     .sosials {
+        @extend .innerBlokCenter;
         ul{
             @extend .reset_parameteres;
             li {
                 display: inline-block;
                 border: 1px solid #ccc;
-                margin: 0 10px;
+                //margin: 0 10px;
+                @extend .mx-1;
                 text-align: center;
                 height: 42px;
                 width: 42px;
@@ -19,7 +21,6 @@
                 border: 1px solid #292929;
             }
         }
-        
         a {
             overflow: hidden;
             width: 42px;
@@ -29,8 +30,6 @@
             overflow: hidden;
             text-align: center;
             transition: all 0.4s ease 0s;
-            
-            
         }
         a i {
             text-decoration: none;

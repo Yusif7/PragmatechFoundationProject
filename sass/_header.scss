@@ -12,9 +12,9 @@
         display: flex;
         justify-content: center;
         .navBar {
-            width: 1160px;
+            width: $inner_blok_width;
             text-align: center;
-            padding: 20px 0;
+            @extend .py-2;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -32,8 +32,7 @@
                 }
             }
             .navBarRight{
-                visibility: hidden;
-                
+                visibility: hidden; 
             }
             .navBarRight ul {
                     @extend .reset_parameteres;
@@ -47,7 +46,7 @@
                         line-height: 14px;
                         letter-spacing: 0.1em;
                         font-weight: 500;
-                        margin: 0 20px;
+                        @extend .mx-2;
                     }
                     a:hover {
                         display: inline-block;
@@ -64,7 +63,8 @@
         justify-content: center;
         align-items: flex-end;
         .content_items{
-            padding-bottom: 60px;
+            //padding-bottom: 60px;
+            @extend .pb-6;
             .hobbi_list {
                 .hobbi{
                     color:$text-color;
@@ -76,12 +76,14 @@
         }
             .media {
                 text-align: center;
-                padding-top: 10px;
+                //padding-top: 10px;
+                @extend .pt-1;
                 a {
                     text-decoration: none;
                 }
                 a i{
-                    padding: 0 10px;
+                    //padding: 0 10px;
+                    @extend .px-1;
                     color: $text-color;
                     font-size: 18px;
                 }
@@ -91,7 +93,8 @@
     }
     .arrow {
         text-align: center;
-        margin-top: 60px;
+        //margin-top: 60px;
+        @extend .mt-6;
         a {
             height: 40px;
         }
