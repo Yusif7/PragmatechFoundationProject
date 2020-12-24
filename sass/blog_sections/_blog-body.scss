@@ -1,5 +1,5 @@
 #blog_body {
-    margin-top: 60px;
+    @extend .mt-6;
     .container {
         margin: 40px auto;
         box-sizing:border-box;
@@ -23,7 +23,7 @@
                 text-decoration: none;
                 opacity: 1;
                 outline: none;
-                margin: 0 0 15px 0
+                @extend .mb-1;
             }
         }
         img {
@@ -46,8 +46,8 @@
                 line-height: 26px;
                 color: #000;
                 border-left: 4px solid #000;
-                padding-left: 20px;
-                margin: 40px 0;
+                @extend .pl-2;
+                @extend .my-4
             }
             ul {
                 margin: 40px auto;
@@ -81,7 +81,7 @@
                 }
             }
             hr {
-                margin: 20px 0;
+                @extend .my-2;
             }
         }
         
@@ -95,7 +95,7 @@
     grid-template-columns: 1fr 11fr;
     grid-gap: 20px;
     grid-auto-rows: 100px;
-    margin: 20px 0;
+    @extend .my-2;
 }
 [class^="row"]{
     display: flex;

@@ -121,3 +121,7 @@
 
 - Works section contetn filter daha dinamik hala getirildi
 - Ümumi optimalaşdırma işləri (Lazim olmayan spacing deyerleri aradan qaldirildi)
+
+# Day 19
+ - Optimalaşdırma
+  - Ortak property olanlarin bir hissesi general-body tek class icine dolduruldu

@@ -5,7 +5,6 @@
     #footer {
         width: 1160px;
         height: 260px;
-        
         box-sizing: border-box;
         @extend .flex-all-center;
         .sosials {
@@ -26,19 +25,16 @@
             }
             
             a {
-                margin-top: 130px;
-                margin: 0 6px;
+                @extend .mx-1;
                 overflow: hidden;
                 width: 42px;
                 height: 42px;
                 line-height: 42px;
                 text-align: center;
-                margin: 0 6px;
+                @extend .my-1;
                 overflow: hidden;
                 text-align: center;
                 transition: all 0.4s ease 0s;
-                
-                
             }
             a i {
                 text-decoration: none;

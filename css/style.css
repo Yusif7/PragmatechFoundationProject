@@ -347,26 +347,10 @@
   position: fixed;
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 #header .nav .navBar {
   width: 1160px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #header .nav .navBar .navBarLeft {
@@ -393,7 +377,6 @@
 }
 
 #header .nav .navBar .navBarRight ul a {
-  text-decoration: none;
   color: #999999;
   font-size: 12px;
   line-height: 14px;
@@ -402,11 +385,10 @@
 }
 
 #header .nav .navBar .navBarRight ul a:hover {
-  display: inline-block;
   -webkit-box-shadow: inset 0 -6px 0 #fdd912;
           box-shadow: inset 0 -6px 0 #fdd912;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 #header .content {
@@ -432,10 +414,6 @@
 
 #header .content .content_items .media {
   text-align: center;
-}
-
-#header .content .content_items .media a {
-  text-decoration: none;
 }
 
 #header .content .content_items .media a i {
@@ -509,16 +487,15 @@
   text-align: center;
   overflow: hidden;
   text-align: center;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
 }
 
 #footer .sosials a i {
-  text-decoration: none;
   font-size: 22px;
   color: #292929;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
   text-align: center;
 }
 
@@ -582,7 +559,6 @@
 
 #about .row .column2 a {
   height: 12px;
-  display: inline-block;
   font-size: 12px;
   color: #292929;
   letter-spacing: 0.2em;
@@ -590,11 +566,9 @@
   line-height: 12px;
   text-transform: uppercase;
   cursor: pointer;
-  text-decoration: none;
   -webkit-box-shadow: inset 0 -6px 0 #fdd912;
           box-shadow: inset 0 -6px 0 #fdd912;
   opacity: 1;
-  outline: none;
 }
 
 #works {
@@ -783,7 +757,6 @@
 }
 
 #blog .container .viewbts a {
-  display: inline-block;
   padding: 2px 0 0 0;
   vertical-align: top;
   font-size: 12px;
@@ -866,12 +839,9 @@
   background: none;
   border: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
 }
 
 #contact .container .inputs .sbtn a {
-  display: inline-block;
   font-size: 12px;
   color: #292929;
   letter-spacing: 0.2em;
@@ -881,12 +851,16 @@
   cursor: pointer;
   -webkit-box-shadow: inset 0 -6px 0 #fdd912;
           box-shadow: inset 0 -6px 0 #fdd912;
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
   color: #292929;
-  text-decoration: none;
   opacity: 1;
-  outline: none;
+}
+
+#contact .container .inputs a:hover {
+  -webkit-transition: all .8s ease 0s;
+  transition: all .8s ease 0s;
+  background: #fdd912;
 }
 
 #contact .container .inputs .input5 {
@@ -907,18 +881,35 @@ body {
           box-sizing: border-box;
 }
 
+body a {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .reset_parameteres, #header .nav .navBar .navBarRight ul, #footer .sosials ul, [class^="text"] {
   margin: 0px;
   padding: 0px;
 }
 
-.flex-all-center, #footer, #about .container, #works, #whatido, #blog, #contact {
+.flex-all-center, #header .nav, #footer, #about .container, #works, #whatido, #blog, #contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex_center_between, #header .nav .navBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -931,7 +922,7 @@ body {
      object-fit: cover;
 }
 
-.a-type, #blog .container .blog_examples a, #blog .container .viewbts a {
+.a-type {
   text-decoration: none;
   outline: none;
 }

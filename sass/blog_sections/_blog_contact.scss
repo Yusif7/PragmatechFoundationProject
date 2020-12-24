@@ -1,7 +1,7 @@
 #blog_contact {
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
+    @extend .mb-6;
     .container {
         width: 1160px;
         .title {
@@ -26,7 +26,7 @@
             border: none;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            margin: 20px 0;
+            @extend .my-2
         }
         textarea {
             width: 100%;
@@ -41,7 +41,7 @@
             border: none;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
-            margin: 20px 0;
+            @extend .my-2
         }
         .sbtn a {
             font-size: 12px;
@@ -57,10 +57,10 @@
             text-decoration: none;
             opacity: 1;
             outline: none;
-            margin-top: 20px;
+            @extend .mt-2;
         }
         form {
-            margin-bottom: 40px;
+            @extend .mb-4;
             a {
                 display: inline-block;
             }

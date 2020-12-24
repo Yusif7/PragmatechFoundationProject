@@ -37,7 +37,6 @@ modalsref.forEach(function(ref){
         // Kenarda iki dene scroll olmasin deye modal acilanda sehife scrol olmasin
         html.setAttribute("style", "overflow: hidden;");
     }
-    
 });
 //Baglanma icon teyin edilsin
 let closeref = document.querySelectorAll("#modal_close");
@@ -50,15 +49,6 @@ closeref.forEach(function(ref){
     }
     
 });
-let wmodals = document.querySelectorAll(".works_modal")
-
-// Bu niye islemir ozumde bilmirem her seyi duzdu ama islemir nerviden partliyiram , derdini tapsaz mene deyin zehmet olmasa 
-window.onclick = function(event){
-    if (event.target == wmodals){
-        wmodals.target.setAttribute("style","opacity: 0; visibility: hidden;");
-    }
-};
-
 
 
 

@@ -21,7 +21,6 @@
         color: #999999;
         line-height: 16px;
         cursor: pointer;
-        //margin: 40px 0;
         @extend .my-4;
         .filterall {
             padding-left: 0;
@@ -60,7 +59,6 @@
 
 
 [class^="filter"] {
-    //padding-left: 40px;
     @extend .pl-4;
 }
 [class^="work"] {
