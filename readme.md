@@ -125,3 +125,7 @@
 # Day 19
  - Optimalaşdırma
   - Ortak property olanlarin bir hissesi general-body tek class icine dolduruldu
+
+# Day 20
+- Blog_main page əlavə edildi
+- Optimalaşdırma

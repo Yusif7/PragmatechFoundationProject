@@ -24,35 +24,6 @@ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 }
 }
 
-
-
-//  bLOGS MODALS
-
-let modalsref = document.querySelectorAll("#open_modal");
-let html = document.querySelector("#html");
-let prev = document.querySelector(".prev")
-let next = document.querySelector(".next")
-
-
-// #open_modal id olan taglarin bir bir gotur
-modalsref.forEach(function(ref){  
-    ref.onclick = function(){
-        let modal = ref.getAttribute("data-modal");
-        document.getElementById(modal).setAttribute("style","opacity: 1; visibility: visible;");
-        html.setAttribute("style", "overflow: hidden;");
-        let src = ref.querySelector("img").getAttribute("src");
-        console.log(src);
-    } 
-});
-//Baglanma icon teyin edilsin
-let closeref = document.querySelectorAll("#close_modal");
-closeref.forEach(function(ref){
-    ref.onclick = function(){
-        let modal = (ref.closest(".blog_modal").setAttribute("style","opacity: 0; visibility: hidden;"));
-        html.setAttribute("style", "overflow: scroll;");
-    }
-});
-
 // PRELOADER 
 
 document.body.onload = function(){
@@ -63,4 +34,3 @@ document.body.onload = function(){
         }
     },700)
 }
-

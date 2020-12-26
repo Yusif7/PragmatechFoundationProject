@@ -358,13 +358,11 @@
 }
 
 #header .nav .navBar .navBarLeft a {
-  display: inline-block;
   font-family: 'Kaushan Script', cursive;
   font-size: 32px;
   line-height: 46px;
   font-weight: 600;
   color: white;
-  text-decoration: none;
   font-style: italic;
 }
 
@@ -492,7 +490,7 @@
 }
 
 #footer .sosials a i {
-  font-size: 22px;
+  font-size: 20px;
   color: #292929;
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
@@ -537,12 +535,6 @@
 }
 
 #about .row .column2 p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 15px;
-  background: white;
-  line-height: 25px;
-  letter-spacing: 0.03em;
-  font-weight: 300;
   margin: 2em 0;
 }
 
@@ -565,7 +557,6 @@
   font-weight: 500;
   line-height: 12px;
   text-transform: uppercase;
-  cursor: pointer;
   -webkit-box-shadow: inset 0 -6px 0 #fdd912;
           box-shadow: inset 0 -6px 0 #fdd912;
   opacity: 1;
@@ -723,7 +714,6 @@
 
 #blog .container {
   width: 1160px;
-  height: 580px;
 }
 
 #blog .container .title {
@@ -748,12 +738,6 @@
   font-weight: 500;
   color: #292929;
   height: 24px;
-}
-
-#blog .container .blog_examples p {
-  font-size: 14px;
-  line-height: 24px;
-  color: #999999;
 }
 
 #blog .container .viewbts a {
@@ -872,6 +856,7 @@
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -884,6 +869,19 @@ body {
 body a {
   text-decoration: none;
   display: inline-block;
+  cursor: pointer;
+}
+
+body p {
+  font-size: 15px;
+  line-height: 25px;
+  color: #999999;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+body hr {
+  opacity: 0.3;
 }
 
 .reset_parameteres, #header .nav .navBar .navBarRight ul, #footer .sosials ul, [class^="text"] {
