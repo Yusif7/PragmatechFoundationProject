@@ -30,7 +30,7 @@
   margin: 20px;
 }
 
-.mt-2, [class^="blogdate"] {
+.mt-2, #blog .container .blog_examples .blogdate {
   margin-top: 20px;
 }
 
@@ -563,7 +563,7 @@
 }
 
 #works {
-  width: 100vw;
+  width: 100%;
 }
 
 #works .title span {
@@ -667,13 +667,13 @@
           box-sizing: border-box;
 }
 
-.box {
-  border: 1px solid black;
-}
-
-[class^="skill"] {
+#whatido .container .ability .skill {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.box {
+  border: 1px solid black;
 }
 
 [class^="items"] {
@@ -740,6 +740,18 @@
   height: 24px;
 }
 
+#blog .container .blog_examples .blogphoto {
+  height: 270px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#blog .container .blog_examples .blogdate {
+  font-size: 12px;
+  font-weight: 400;
+  color: #b9b9b9;
+}
+
 #blog .container .viewbts a {
   padding: 2px 0 0 0;
   vertical-align: top;
@@ -756,18 +768,6 @@
 [class^="blog"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-}
-
-[class^="blogphoto"] {
-  height: 270px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-[class^="blogdate"] {
-  font-size: 12px;
-  font-weight: 400;
-  color: #b9b9b9;
 }
 
 #contact .container {
@@ -856,7 +856,6 @@
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -864,6 +863,7 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body a {

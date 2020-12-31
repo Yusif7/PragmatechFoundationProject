@@ -3,7 +3,7 @@
     background: #f9f9f9;
     #footer {
         width: 1160px;
-        height: 260px;
+        @extend .innerBlokCenter;
         box-sizing: border-box;
         @extend .flex-all-center;
         .sosials {
@@ -18,6 +18,7 @@
                     border-radius: 42px;
                 }
                 li:hover {
+                    transition: all 0.8s ease 0s;
                     border: 1px solid #292929;
                 }
             }
@@ -28,12 +29,10 @@
                 line-height: 42px;
                 overflow: hidden;
                 text-align: center;
-                transition: all 0.8s ease 0s;
             }
             a i {
                 font-size: 20px;
                 color: #292929;
-                transition: all 0.8s ease 0s;
             }
         }
     

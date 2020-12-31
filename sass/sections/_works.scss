@@ -1,7 +1,6 @@
 #works {
-    //height: 850px;
     @extend .flex-all-center;
-    width: 100vw;
+    width: 100%;
     .container{
         @extend .innerBlokCenter;
     }

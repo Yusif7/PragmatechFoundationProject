@@ -24,7 +24,8 @@ i = 0
 //  WORKS SECTION MODALS
 
 let modalsref = document.querySelectorAll("#open_modal");
-let html = document.querySelector("#html");
+let html = document.querySelector("html");
+
 html.className
 // #open_modal id olan taglarin bir bir gotur
 modalsref.forEach(function(ref){

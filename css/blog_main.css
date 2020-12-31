@@ -70,7 +70,6 @@
   color: #292929;
   font-size: 30px;
   line-height: 40px;
-  font-weight: 400;
 }
 
 #blog_body .container .row {
@@ -83,19 +82,15 @@
 
 #blog_body .container .row a {
   font-size: 19px;
-  font-weight: 500;
   color: #292929;
   height: 24px;
 }
 
 #blog_body .container .viewbts a {
   padding: 2px 0 0 0;
-  vertical-align: top;
   font-size: 12px;
   color: #292929;
   letter-spacing: 0.2em;
-  font-weight: 500;
-  line-height: 12px;
   -webkit-box-shadow: inset 0 -6px 0 #fdd912;
           box-shadow: inset 0 -6px 0 #fdd912;
 }
@@ -104,10 +99,6 @@
   background: #fdd912;
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
-}
-
-.box {
-  border: 1px solid black;
 }
 
 [class^="blog_inner"] {
@@ -123,7 +114,6 @@
 
 [class^="blogdate"] {
   font-size: 12px;
-  font-weight: 400;
   color: #b9b9b9;
 }
 
@@ -133,7 +123,6 @@
 
 #blog_footer #footer {
   width: 1160px;
-  height: 260px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -147,6 +136,8 @@
 }
 
 #blog_footer #footer .sosials ul li:hover {
+  -webkit-transition: all 0.8s ease 0s;
+  transition: all 0.8s ease 0s;
   border: 1px solid #292929;
 }
 
@@ -156,21 +147,16 @@
   line-height: 42px;
   overflow: hidden;
   text-align: center;
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
 }
 
 #blog_footer #footer .sosials a i {
   font-size: 20px;
   color: #292929;
-  -webkit-transition: all 0.8s ease 0s;
-  transition: all 0.8s ease 0s;
 }
 
 html {
   overflow-y: scroll;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -178,6 +164,7 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body a {
@@ -239,7 +226,7 @@ body hr {
   outline: none;
 }
 
-.innerBlokCenter, #blog_body .container {
+.innerBlokCenter, #blog_body .container, #blog_footer #footer {
   margin: 7em auto;
 }
 

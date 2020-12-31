@@ -1,12 +1,14 @@
 html {
     overflow-y: scroll;
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 }
 body {
     margin: 0px;
     font-family: 'Poppins', sans-serif;
     box-sizing:border-box;
+    overflow-x: hidden;
+    //width: 100%;
     a{
         text-decoration: none;
         display: inline-block;

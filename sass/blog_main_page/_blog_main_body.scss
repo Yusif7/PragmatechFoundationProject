@@ -9,7 +9,6 @@
             color: #292929;
             font-size: 30px;
             line-height: 40px;
-            font-weight: 400;
         }
         .row {
             display: grid;
@@ -17,7 +16,6 @@
             grid-gap: 40px;
             a {
                 font-size: 19px;
-                font-weight: 500;
                 color: #292929;
                 height: 24px;
             }
@@ -29,12 +27,9 @@
             @extend .mt-4;
             a {
                 padding: 2px 0 0 0;
-                vertical-align: top;
                 font-size: 12px;
                 color: #292929;
                 letter-spacing: 0.2em;
-                font-weight: 500;
-                line-height: 12px;
                 box-shadow: inset 0 -6px 0 #fdd912;
             }
             a:hover {
@@ -50,9 +45,7 @@
 
 
 
-.box {
-    border: 1px solid black;
-}
+
 [class^="blog_inner"]{
     box-sizing:border-box;
 }
@@ -62,7 +55,6 @@
 }
 [class^="blogdate"] {
     font-size: 12px;
-    font-weight: 400;
     color: #b9b9b9;
     @extend .mt-2;
 }

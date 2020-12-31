@@ -29,7 +29,7 @@ if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
 //  bLOGS MODALS
 
 let modalsref = document.querySelectorAll("#open_modal");
-let html = document.querySelector("#html");
+let html = document.querySelector("html");
 let prev = document.querySelector(".prev")
 let next = document.querySelector(".next")
 

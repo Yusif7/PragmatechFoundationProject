@@ -26,6 +26,16 @@
             img {
                 @extend .image-full-div;
             }
+            .blogphoto {
+                height: 270px;
+                box-sizing: border-box;
+            }
+            .blogdate {
+                font-size: 12px;
+                font-weight: 400;
+                color: #b9b9b9;
+                @extend .mt-2;
+            }
         }
         .viewbts {
             @extend .mt-4;
@@ -48,14 +58,3 @@
 [class^="blog"] {
     box-sizing:border-box;
 }
-[class^="blogphoto"] {
-    height: 270px;
-    box-sizing: border-box;
-}
-[class^="blogdate"] {
-    font-size: 12px;
-    font-weight: 400;
-    color: #b9b9b9;
-    @extend .mt-2;
-}
-

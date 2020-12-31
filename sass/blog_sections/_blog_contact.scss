@@ -12,30 +12,21 @@
             font-weight: bold;
             font-family: 'Kaushan Script', cursive;
         }
-        
         input {
             width: 100%;
             height: 48px;
-            font-size: 13px;
             color: #292929;
-            letter-spacing: -0.045em;
-            font-weight: 500;
-            resize: none;
             outline: 0;
             background: none;
             border: none;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            transition: all 0.8s ease;
             @extend .my-2
         }
         textarea {
             width: 100%;
             height: 48px;
-            font-size: 13px;
-            color: #292929;
-            letter-spacing: -0.045em;
-            font-weight: 500;
-            resize: none;
+            color: #292929;;
             outline: 0;
             background: none;
             border: none;
