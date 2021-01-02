@@ -24,6 +24,9 @@
         .filterall {
             padding-left: 0;
         }
+        .filter1:hover {
+            color:$about-ref-color;
+        }
     }
     .work_items {
         width: $inner_blok_width;
@@ -51,6 +54,7 @@
         .hide {
             display: none;
         }
+        
     }
     
 }

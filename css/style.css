@@ -591,6 +591,10 @@
   padding-left: 0;
 }
 
+#works .allFilters .filter1:hover {
+  color: #fdd912;
+}
+
 #works .work_items {
   width: 1160px;
   height: 600px;
@@ -855,7 +859,6 @@
 
 html {
   overflow-y: scroll;
-  scroll-behavior: smooth;
 }
 
 body {

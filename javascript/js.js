@@ -146,3 +146,26 @@ function app(){
 }
 // Umumi funksiyani cagir
 app()
+
+
+//Page scroll
+// Menu navigation (main,about ...) bunlarin hamisina eyni klass verin
+let scrollItems = document.querySelectorAll(".smoothScroll");
+// Her birinin icine daxil ol 
+for(let i = 0;i < scrollItems.length; i++) {
+    // Click olunannda action/event olsun
+    scrollItems[i].addEventListener("click",function(event){
+        // Defaulr deyerleri legv edilsin
+        event.preventDefault();
+        // Onlarin herf atributlarinin value alinsin ve birinci deyeri silinsi yani "#"
+        // Burda const istifade etdim ki bu siyahi deyisilmez olsun sigorta meqsedli
+        const sectionId = event.target.getAttribute("href").substr(1);
+        // Id -si atribut deyerine beraber olan taglari tapdim
+        // ScrollIntoView methodu qeyd olunan scroll olmasini ucundur
+        document.getElementById(sectionId).scrollIntoView({
+            behavior:"smooth",
+            // Burda qeyd olunan start demek dir ki lazim olan blockun lap bas terefine yonelsin
+            block: "start"
+        })
+    })
+}

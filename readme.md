@@ -129,3 +129,6 @@
 # Day 20
 - Blog_main page əlavə edildi
 - Optimalaşdırma
+
+# Day 21
+ - Scrollpage deyisdirildi butun brauzerlerde islek hala getirildi
