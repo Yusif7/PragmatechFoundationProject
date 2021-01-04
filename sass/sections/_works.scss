@@ -1,8 +1,27 @@
 #works {
     @extend .flex-all-center;
-    width: 100%;
     .container{
         @extend .innerBlokCenter;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1160px;
+    }
+    @media (max-width:1200px){
+        .container {
+            width: 970px;
+        }
+    }
+    @media (max-width:992px) {
+        .container {
+            width: 750px;
+        }
+    }
+    @media (max-width:767px) {
+        .container {
+            width: none;
+        }
     }
     .title {
         span{
@@ -21,6 +40,7 @@
         line-height: 16px;
         cursor: pointer;
         @extend .my-4;
+        box-sizing: border-box;
         .filterall {
             padding-left: 0;
         }
@@ -29,14 +49,10 @@
         }
     }
     .work_items {
-        width: $inner_blok_width;
-        height: 600px;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap: $grid-gap;
-        grid-auto-rows: 270px;
+        display: flex;
+        margin: 40px 0;
         transition: all 0.8s ease 0s;
-        
+        box-sizing: border-box;
         img {
             width: 100%;
             height: 100%;
@@ -54,7 +70,46 @@
         .hide {
             display: none;
         }
+        .branding {
+            margin: 0 40px;
+        }
+        .works {
+            overflow: hidden;
+            transition: all 0.8s ease 0s;
+            width: 33.333%;
+        }
         
+    }
+    .work_items1 {
+        display: flex;
+        margin: 40px 0;
+        transition: all 0.8s ease 0s;
+        box-sizing: border-box;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        img:hover {
+            transform: scale(1.2);
+            transition: all .5s ease;
+        }
+        .anime {
+            transform: scale(0);
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+        }
+        .hide {
+            display: none;
+        }
+        .photography{
+            margin: 0 40px;
+        }
+        .works {
+            overflow: hidden;
+            transition: all 0.8s ease 0s;
+            width: 33.333%;
+        }
     }
     
 }
@@ -63,8 +118,4 @@
 
 [class^="filter"] {
     @extend .pl-4;
-}
-[class^="work"] {
-    overflow: hidden;
-    transition: all 0.8s ease 0s;
 }

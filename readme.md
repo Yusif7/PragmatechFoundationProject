@@ -132,3 +132,7 @@
 
 # Day 21
  - Scrollpage deyisdirildi butun brauzerlerde islek hala getirildi
+
+# Day 22
+- Template uygun 3 table yaradildi
+- Optimallasdirma basic responsive settings

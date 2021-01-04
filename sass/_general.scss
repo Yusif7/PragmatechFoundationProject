@@ -1,12 +1,13 @@
 html {
     overflow-y: scroll;
-    //scroll-behavior: smooth;
 }
 body {
     margin: 0px;
     font-family: 'Poppins', sans-serif;
-    box-sizing:border-box;
     overflow-x: hidden;
+    * {
+        box-sizing: border-box;
+    }
     a{
         text-decoration: none;
         display: inline-block;
@@ -22,7 +23,9 @@ body {
     hr {
         opacity: 0.3;
     }
+
 }
+
 
 .reset_parameteres {
     margin: 0px;

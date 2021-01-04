@@ -6,6 +6,7 @@ $title-margin: 30px;
 $button-margin: 40px;
 $grid-gap: 40px;
 $inner_blok_width:1160px;
+$colWidth:100%/12;
 
 
 // spacing
@@ -62,5 +63,15 @@ $spacing-4x:$spacing-1x*4;
     }
     .py-#{$i} {
         padding: $spacing-1x*$i 0px !important;
+    }
+}
+
+// Grid 12-column
+.container {
+    width: 1160px;
+}
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        width: $colWidth*$i;
     }
 }

@@ -13,9 +13,7 @@
             font-weight: 400;
         }
         .blog_examples {
-            display: grid;
-            grid-template-columns: repeat(3,1fr);
-            grid-gap: $grid-gap;
+            display: flex;
             a {
                 font-size: 19px;
                 line-height: 24px;
@@ -52,6 +50,21 @@
             }
         }
 
+    }
+    @media (max-width:1200px){
+        .container {
+            width: 970px;
+        }
+    }
+    @media (max-width:992px) {
+        .container {
+            width: 750px;
+        }
+    }
+    @media (max-width:767px) {
+        .container {
+            width: none;
+        }
     }
 }
 
