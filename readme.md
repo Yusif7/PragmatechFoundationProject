@@ -136,3 +136,7 @@
 # Day 22
 - Template uygun 3 table yaradildi
 - Optimallasdirma basic responsive settings
+
+# Day 23
+- Sql many-to-many queryleri tetbiq olundu portfolio bolmesinin table tam yigildi
+- Responsive settings

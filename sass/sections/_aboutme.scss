@@ -1,12 +1,66 @@
 #about {
     @extend .flex-all-center;
     .container{
-        //width: 100%;
         @extend .innerBlokCenter;
-        //@extend .flex-all-center;
+        max-width: 1160px;
         color: $about-color;
+        box-sizing: border-box;
+        .row {
+            //@extend .innerBlokCenter;
+            display: flex;
+            box-sizing: border-box;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            //grid-gap: 40px;
+            .column1 {
+                height: 100%;
+                img{
+                    @extend .image-full-div;
+                    box-sizing: border-box;
+                }
+            }
+            .column2     {
+                .column2-text {
+                    width: 100%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    padding: 20px 20px;
+                }
+                h1 {
+                    font-family: 'Kaushan Script', cursive;
+                    font-weight: 400;
+                    color: $about-text-color;
+                    font-size: 44px;
+                    line-height: 56px;
+                    margin: 0;
+                }
+                p {
+                    margin: 2em 0;
+                }
+                .btn{
+                    width: 155px;
+                    height: 14px;
+                    a:hover{
+                        transition: all .8s ease 0s;
+                        background:$about-ref-color;
+                    }
+                }
+                
+                a {
+                    height: 12px;
+                    font-size: 12px;
+                    color: $about-text-color;
+                    letter-spacing: 0.2em;
+                    font-weight: 500;
+                    line-height: 12px;
+                    text-transform: uppercase;                
+                    box-shadow: inset 0 -6px 0 $about-ref-color;
+                    opacity: 1;
+                }
+            }
+        }
     }
-    @media (max-width:1200px){
+    /*@media (max-width:1200px){
         .container {
             width: 970px;
         }
@@ -15,64 +69,13 @@
         .container {
             width: 750px;
         }
-    }
+    }*/
     @media (max-width:767px) {
         .container {
-            width: none;
+            padding: 40px;
         }
-    }
-    .row {
-        @extend .innerBlokCenter;
-        //width: $inner_blok_width;
-        display: flex;
-        height: 420px;
-        /*display: grid;
-        grid-template-columns: 30% 70%;*/
-        box-sizing: border-box;
-        .col-4 {
-            //height: 420px;
-            img{
-                @extend .image-full-div;
-            }
-        }
-        .col-8 {
-            .column2-text {
-                width: 100%;
-                height: 100%;
-                box-sizing: border-box;
-                padding: 20px 20px;
-            }
-            h1 {
-                font-family: 'Kaushan Script', cursive;
-                font-weight: 400;
-                color: $about-text-color;
-                font-size: 44px;
-                line-height: 56px;
-                margin: 0;
-            }
-            p {
-                margin: 2em 0;
-            }
-            .btn{
-                width: 155px;
-                height: 14px;
-                a:hover{
-                    transition: all .8s ease 0s;
-                    background:$about-ref-color;
-                }
-            }
-            
-            a {
-                height: 12px;
-                font-size: 12px;
-                color: $about-text-color;
-                letter-spacing: 0.2em;
-                font-weight: 500;
-                line-height: 12px;
-                text-transform: uppercase;                
-                box-shadow: inset 0 -6px 0 $about-ref-color;
-                opacity: 1;
-            }
+        [class^="column"]{
+            grid-column: 1/4;
         }
     }
 }

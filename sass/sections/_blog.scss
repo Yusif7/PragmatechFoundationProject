@@ -2,7 +2,7 @@
     background: #f9f9f9;
     @extend .flex-all-center;
     .container {    
-        width: $inner_blok_width;
+        max-width: $inner_blok_width;
         @extend .innerBlokCenter;
         .title {
             @extend .mb-4;
@@ -13,7 +13,9 @@
             font-weight: 400;
         }
         .blog_examples {
-            display: flex;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap: 40px;
             a {
                 font-size: 19px;
                 line-height: 24px;
@@ -63,7 +65,10 @@
     }
     @media (max-width:767px) {
         .container {
-            width: none;
+            padding: 0 40px;
+        }
+        [class^="blog"]{
+            grid-column: 1/4;
         }
     }
 }

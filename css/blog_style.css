@@ -311,11 +311,6 @@ body {
   overflow-x: hidden;
 }
 
-body * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body a {
   text-decoration: none;
   display: inline-block;
@@ -839,10 +834,6 @@ body hr {
 
 .py-6 {
   padding: 60px 0px !important;
-}
-
-.container {
-  width: 1160px;
 }
 
 .col-1 {
