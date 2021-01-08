@@ -64,15 +64,15 @@
                     font-size: 100px;
                     line-height: 100px;
                 }
-        }
+            }
             .media {
                 text-align: center;
-                @extend .pt-1;
-                a i{
-                    @extend .px-1;
-                    color: $text-color;
+                a {
+                    margin: 0 0 0 20px;
                     font-size: 18px;
+                    color: #ffffff;
                 }
+                
             }
         }
         

@@ -139,4 +139,5 @@
 
 # Day 23
 - Sql many-to-many queryleri tetbiq olundu portfolio bolmesinin table tam yigildi
-- Responsive settings
+- Responsive settings 
+  - Blog_inner və Blog_main ucun responsive settings

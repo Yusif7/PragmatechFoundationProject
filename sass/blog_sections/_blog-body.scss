@@ -3,8 +3,7 @@
     .container {
         margin: 40px auto;
         box-sizing:border-box;
-        width: 1160px;
-        
+        max-width: 1160px;
         .title {
             @extend .mt-6;
             h1 {
@@ -81,6 +80,26 @@
         }
         
     }
+    @media (max-width:1200px){
+        .container {
+            width: 970px;
+        }
+    }
+    @media (max-width:992px) {
+        .container {
+            width: 750px;
+        }
+    }
+    @media (max-width:767px) {
+        .container {
+            padding: 40px;
+        }
+        [class^="blog_work"]{
+            grid-column: 1/4;
+            margin: 20px auto;
+        }
+    }
+
 }
 
 
