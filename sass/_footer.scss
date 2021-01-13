@@ -2,39 +2,58 @@
     background: #f9f9f9;
     box-sizing: border-box;
     @extend .flex-all-center;
-    .sosials {
-        @extend .innerBlokCenter;
-        ul{
-            @extend .reset_parameteres;
-            li {
-                display: inline-block;
-                border: 1px solid #ccc;
-                @extend .mx-1;
-                text-align: center;
-                height: 42px;
+    .container {
+        max-width: 1160px;
+        .sosials {
+            text-align: center;
+            @extend .innerBlokCenter;
+            ul{
+                @extend .reset_parameteres;
+                li {
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    @extend .mx-1;
+                    text-align: center;
+                    height: 42px;
+                    width: 42px;
+                    border-radius: 42px;
+                }
+                li:hover {
+                    border: 1px solid #292929;
+                }
+            }
+            a {
+                overflow: hidden;
                 width: 42px;
-                border-radius: 42px;
+                height: 42px;
+                line-height: 42px;
+                text-align: center;
+                overflow: hidden;
+                text-align: center;
+                transition: all 0.8s ease 0s;
             }
-            li:hover {
-                border: 1px solid #292929;
+            a i {
+                font-size: 20px;
+                color: #292929;
+                transition: all 0.8s ease 0s;
+                text-align: center;
             }
-        }
-        a {
-            overflow: hidden;
-            width: 42px;
-            height: 42px;
-            line-height: 42px;
-            text-align: center;
-            overflow: hidden;
-            text-align: center;
-            transition: all 0.8s ease 0s;
-        }
-        a i {
-            font-size: 20px;
-            color: #292929;
-            transition: all 0.8s ease 0s;
-            text-align: center;
         }
     }
+    @media (max-width:1200px){
+        .container {
+            width: 970px;
+        }
+    }
+    @media (max-width:992px) {
+        .container {
+            width: 750px;
+        }
+    }
+    @media (max-width:767px) {
+        .container {
+            width:550px;
+        }
 
+    }    
 }

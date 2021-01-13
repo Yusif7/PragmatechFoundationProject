@@ -18,7 +18,7 @@
   margin-right: 10px;
 }
 
-.mx-1, #footer .sosials ul li {
+.mx-1, #footer .container .sosials ul li {
   margin: 0px 10px;
 }
 
@@ -386,6 +386,7 @@
   height: 635px;
   background: url("/img/backround-new.png");
   background-size: cover;
+  background-position: center center;
 }
 
 #header .nav {
@@ -511,7 +512,15 @@
           box-sizing: border-box;
 }
 
-#footer .sosials ul li {
+#footer .container {
+  max-width: 1160px;
+}
+
+#footer .container .sosials {
+  text-align: center;
+}
+
+#footer .container .sosials ul li {
   display: inline-block;
   border: 1px solid #ccc;
   text-align: center;
@@ -520,11 +529,11 @@
   border-radius: 42px;
 }
 
-#footer .sosials ul li:hover {
+#footer .container .sosials ul li:hover {
   border: 1px solid #292929;
 }
 
-#footer .sosials a {
+#footer .container .sosials a {
   overflow: hidden;
   width: 42px;
   height: 42px;
@@ -536,12 +545,30 @@
   transition: all 0.8s ease 0s;
 }
 
-#footer .sosials a i {
+#footer .container .sosials a i {
   font-size: 20px;
   color: #292929;
   -webkit-transition: all 0.8s ease 0s;
   transition: all 0.8s ease 0s;
   text-align: center;
+}
+
+@media (max-width: 1200px) {
+  #footer .container {
+    width: 970px;
+  }
+}
+
+@media (max-width: 992px) {
+  #footer .container {
+    width: 750px;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer .container {
+    width: 550px;
+  }
 }
 
 #about .container {
@@ -664,12 +691,8 @@
 }
 
 #works .container .allFilters {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  /*display: flex;
+            justify-content: start;*/
   font-size: 15px;
   color: #999999;
   line-height: 16px;
@@ -684,6 +707,14 @@
 
 #works .container .allFilters .filter1:hover {
   color: #fdd912;
+}
+
+#works .container .allFilters .filter1 {
+  display: inline-block;
+}
+
+#works .container .allFilters .branding, #works .container .allFilters .kits {
+  padding: 0 10px;
 }
 
 #works .container .work_items {
@@ -751,6 +782,15 @@
     -ms-grid-column-span: 3;
     grid-column: 1/4;
   }
+  #works .work_items {
+    padding: 0 20px;
+  }
+  #works .title {
+    padding-left: 20px;
+  }
+  #works .allFilters {
+    padding-left: 20px;
+  }
 }
 
 #whatido {
@@ -760,8 +800,7 @@
 }
 
 #whatido .container {
-  width: 1160px;
-  height: 400px;
+  max-width: 1160px;
 }
 
 #whatido .container .title {
@@ -778,24 +817,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#whatido .container .ability .skill {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#whatido .container .ability2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-#whatido .container .ability2 .skill {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -814,7 +840,12 @@
 
 @media (max-width: 767px) {
   #whatido .container {
-    width: none;
+    padding: 0 40px;
+  }
+  #whatido [class^="skill"] {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-column: 1/4;
   }
 }
 
@@ -826,7 +857,7 @@
 [class^="icon"] {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  width: 360px;
+  max-width: 360px;
   height: 48px;
   font-size: 38px;
   line-height: 48px;
@@ -1070,7 +1101,7 @@ body hr {
   opacity: 0.3;
 }
 
-.reset_parameteres, #header .nav .navBar .navBarRight ul, #footer .sosials ul, [class^="text"] {
+.reset_parameteres, #header .nav .navBar .navBarRight ul, #footer .container .sosials ul, [class^="text"] {
   margin: 0px;
   padding: 0px;
 }
@@ -1111,7 +1142,7 @@ body hr {
   outline: none;
 }
 
-.innerBlokCenter, #footer .sosials, #about .container, #works .container, #whatido .container, #blog .container, #contact .container {
+.innerBlokCenter, #footer .container .sosials, #about .container, #works .container, #whatido .container, #blog .container, #contact .container {
   margin: 7em auto;
 }
 
