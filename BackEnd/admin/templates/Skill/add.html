@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/admin/skill/add" method="POST" enctype="multipart/form-data">
+    {{form.skill_title.label}}{{form.skill_title(class="form-control")}}    
+    {{form.skill_status.label}}{{form.skill_status(class="form-control")}}
+    {{form.skill_icon.label}}{{form.skill_icon(class="form-control")}}
+    {{form.skill_content.label}}{{form.skill_content(class="form-control")}}
+    {{form.submit(class="form-control", value = "Add new skill")}}
+</form>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/admin/about/add">
+<button type="submit" style="background-color: darkblue; border-radius:25px; color:azure; margin:20px auto; font-size: 20px;">
+    Add Info
+</button>
+</form>
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">About Info</th>
+        <th scope="col">Personal Photo</th>
+        <th scope="col">Date</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+      </tr>
+    </thead>
+    <tbody>.
+      {% for object in about %}
+      <tr>
+        <td>{{object.id}}</td>
+        <td>{{object.about_title}}</td>
+        <td>{{object.about_content}}</td>
+        <td>{{object.about_img}}</td>
+        <td>{{object.about_date}}</td>
+        <td><a href="/admin/about/delete/{{object.id}}">Delete</a></td>
+        <td><a href="/admin/about/update/{{object.id}}">Update</a></td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+  </table>
+{% endblock %}

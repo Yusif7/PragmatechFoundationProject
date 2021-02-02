@@ -4,6 +4,8 @@ from flask import render_template, redirect, request, url_for
 # We import forms file from route because we want ad forms to our html pages
 from . forms import ContactForms
 #from flask import Blueprint
+import os
+import random
 
 # blogs = Blueprint('blog',__name__,url_prefix='/blog')
 # blogsS = Blueprint('blogSingle',__name__,url_prefix='/blog')
