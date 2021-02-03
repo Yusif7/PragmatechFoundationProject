@@ -179,3 +179,36 @@ def deleteSkill(id):
     return redirect ('/admin/skill')
 
 # END OF ROUTE OO SKILL
+
+# ROUTES FOR CONTACT
+
+@admin.route('/contact')
+def contact():
+    contacts = Contact.query.all()
+    return render_template('Contact/contact.html',contactList=contacts)
+
+@admin.route('/contact/delete/<int:id>')
+def deleteContact(id):
+    contact = Contact.query.get(id)
+    db.session.delete(contact)
+    db.session.commit()
+    return redirect ('/admin/contact')
+
+
+# END OF ROUTES FOR CONTACT
+
+# ROUTES FOR BLOG REPLY
+
+@admin.route('/reply')
+def reply():
+    replies = BlogReply.query.all()
+    return render_template('BlogReply/reply.html',replyList=replies)
+
+@admin.route('/reply/delete/<int:id>')
+def deleteReply(id):
+    reply = BlogReply.query.get(id)
+    db.session.delete(reply)
+    db.session.commit()
+    return redirect ('/admin/reply')
+
+# END OF ROUTES FOR BLOG REPLY

@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">Message</th>
+        <th scope="col">Date</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for reply in replyList %}
+    <tr>
+        <td>{{reply.id}}</td>
+        <td>{{reply.blogReply_name}}</td>
+        <td>{{reply.blogReply_email}}</td>
+        <td>{{reply.blogReply_content}}</td>
+        <td>{{reply.blogReply_date}}</td>
+        <td><a href="/admin/reply/delete/{{reply.id}}">Delete</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
