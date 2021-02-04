@@ -1,6 +1,6 @@
 from flask import Blueprint,render_template,redirect,request
 from app import db
-from . forms import AboutForm, BlogForm, SkillForm
+from . forms import AboutForm, BlogForm, SkillForm, CategoryForm, WorksForm
 from app.models import *
 import os
 import random
@@ -212,3 +212,81 @@ def deleteReply(id):
     return redirect ('/admin/reply')
 
 # END OF ROUTES FOR BLOG REPLY
+
+# ROUTES FOR WORKS CATEGORY
+
+@admin.route('/works/categories')
+def categories():
+    categories = Category.query.all()
+    return render_template('Works/Category/categories.html',categoryList=categories)
+
+@admin.route('/works/categories/add', methods=['GET', 'POST'])
+def addCategory():
+    categoryform = CategoryForm()
+    if request.method == 'POST':
+        category = Category (
+            category_data = categoryform.category_data.data,
+            category_name = categoryform.category_name.data,
+            category_all = categoryform.category_all.data
+        )
+        db.session.add(category)
+        db.session.commit()
+        return redirect ('/admin/works/categories')
+    return render_template('Works/Category/add.html', form=categoryform)
+
+@admin.route('/works/categories/update/<int:id>', methods=['GET', 'POST'])
+def updateCategory(id):
+    category = Category.query.get(id)
+    categoryform = CategoryForm()
+    if request.method == 'POST':
+        newData = categoryform.category_data.data
+        newName = categoryform.category_name.data
+        newAll = categoryform.category_all.data
+        category.category_data = newData
+        category.category_name = newName
+        category.category_all = newAll
+        db.session.merge(category)
+        db.session.flush()
+        db.session.commit()
+        return redirect ('/admin/works/categories')
+    return render_template('Works/Category/update.html', form=categoryform, category=category)
+
+@admin.route('/works/categories/delete/<int:id>')
+def deleteCategory(id):
+    category = Category.query.get(id)
+    db.session.delete(category)
+    db.session.commit()
+    return redirect ('/admin/works/categories')
+
+# END OF ROUTES FOR WORKS CATEGORY
+
+# ROUTES FOR WORKS
+
+@admin.route('/works')
+def works():
+    works = Works.query.all()
+    return render_template('Works/works.html',workList=works)
+
+@admin.route('/works/add', methods=['GET', 'POST'])
+def addworks():
+    worksform = WorksForm()
+    if request.method == 'POST':
+        file = worksform.work_img.data
+        file.save(file.filename)
+        works = Works (
+            work_title = worksform.work_title.data,
+            work_img = file.filename,
+            work_content = worksform.work_content.data,
+            work_status = worksform.work_status.data,
+            work_class = worksform.work_class.data,
+            work_data = worksform.work_data.data,
+            work_brand = worksform.work_brand.data,
+            work_date = date.today(),
+            categoryId = worksform.categories.data
+        )
+        db.session.add(works)
+        db.session.commit()
+        return redirect ('/admin/works')
+    return render_template('Works/add.html', form=worksform)
+
+# END OF ROUTES FOR WORKS

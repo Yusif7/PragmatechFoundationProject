@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/admin/works/categories/add" method="POST" enctype="multipart/form-data">
+    {{form.category_name.label}}{{form.category_name(class="form-control")}}    
+    {{form.category_data.label}}{{form.category_data(class="form-control")}}  
+    {{form.category_all.label}}{{form.category_all(class="form-control")}}  
+    {{form.submit(class="form-control", value = "Add new category")}}
+</form>
+{% endblock %}

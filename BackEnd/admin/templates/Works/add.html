@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/admin/works/add" method="POST" enctype="multipart/form-data">
+    {{form.work_title.label}}{{form.work_title(class="form-control")}}    
+    {{form.work_content.label}}{{form.work_content(class="form-control")}}
+    {{form.work_class.label}}{{form.work_class(class="form-control")}}  
+    {{form.work_data.label}}{{form.work_data(class="form-control")}}  
+    {{form.work_brand.label}}{{form.work_brand(class="form-control")}}  
+    {{form.work_img.label}}{{form.work_img(class="form-control")}}  
+    {{form.categories.label}}{{form.categories(class="form-control")}}  
+    {{form.work_status.label}}{{form.work_status(class="form-control")}}  
+    {{form.submit(class="form-control", value = "Add new skill")}}
+</form>
+{% endblock %}

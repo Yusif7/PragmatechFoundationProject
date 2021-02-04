@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/admin/works/categories/add">
+<button type="submit" style="background-color: darkblue; border-radius:25px; color:azure; margin:20px auto; font-size: 20px;">
+    Add New Blog
+</button>
+</form>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">name</th>
+        <th scope="col">Data Filter</th>
+        <th scope="col">Category All</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for category in categoryList %}
+    <tr>
+        <td>{{category.id}}</td>
+        <td>{{category.category_name}}</td>
+        <td>{{category.category_data}}</td>
+        <td>{{category.category_all}}</td>
+        <td><a href="/admin/works/categories/delete/{{category.id}}">Delete</a></td>
+        <td><a href="/admin/works/categories/update/{{category.id}}">Update</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

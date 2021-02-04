@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="/admin/works/add">
+<button type="submit" style="background-color: darkblue; border-radius:25px; color:azure; margin:20px auto; font-size: 20px;">
+    Add New Blog
+</button>
+</form>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+        <th scope="col">Img</th>
+        <th scope="col">Class</th>
+        <th scope="col">Data</th>
+        <th scope="col">Brand</th>
+        <th scope="col">Status</th>
+        <th scope="col">Date</th>
+        <th scope="col">Categories</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Update</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for work in workList %}
+    <tr>
+        <td>{{work.id}}</td>
+        <td>{{work.work_title}}</td>
+        <td>{{work.work_content}}</td>
+        <td>{{work.work_img}}</td>
+        <td>{{work.work_class}}</td>
+        <td>{{work.work_data}}</td>
+        <td>{{work.work_brand}}</td>
+        <td>{{work.work_status}}</td>
+        <td>{{work.work_date}}</td>
+        <td>{{work.categoryId}}</td>
+        <td><a href="/admin/works/delete/{{work.id}}">Delete</a></td>
+        <td><a href="/admin/works/update/{{work.id}}">Update</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

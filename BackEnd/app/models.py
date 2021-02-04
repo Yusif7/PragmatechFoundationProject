@@ -35,8 +35,20 @@ class Blog(db.Model):
     blog_author = db.Column(db.String(50), nullable=False)
     blog_date = db.Column(db.DateTime)
     blog_status = db.Column(db.String(10), nullable=False)
+    blog_info = db.Column(db.String)
 
 # END OF BLOG MODEL
+
+# WORKS CATEGORY
+
+class Category(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    category_data = db.Column(db.String(30), nullable=False)
+    category_name = db.Column(db.String(30), unique=True, nullable=False)
+    category_all = db.Column(db.String(30),nullable=False)
+    works = db.relationship('Works', backref='workCat', lazy=True)
+
+# END OF WORKS CATEGORY
 
 # WORKS MODEL
 
@@ -50,17 +62,9 @@ class Works(db.Model):
     work_brand = db.Column(db.String(50), nullable=False)
     work_status = db.Column(db.String(10), nullable=False)
     work_date = db.Column(db.DateTime)
+    categoryId = db.Column(db.Integer, db.ForeignKey('category.id'), nullable=False)
 
 # END OF WORKS MODEL
-
-# WORKS CATEGORY
-
-class Category(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    category_data = db.Column(db.String(30), nullable=False)
-    category_name = db.Column(db.String(30), unique=True, nullable=False)
-    category_all = db.Column(db.String(30), nullable=False)
-# END OF WORKS CATEGORY
 
 
 # CONTACT MODEL
