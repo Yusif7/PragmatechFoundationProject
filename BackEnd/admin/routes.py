@@ -1,5 +1,5 @@
 from flask import Blueprint,render_template,redirect,request
-from app import db
+from app import db,app
 from . forms import AboutForm, BlogForm, SkillForm, CategoryForm, WorksForm
 from app.models import *
 import os
@@ -25,15 +25,20 @@ def about():
     about = About.query.all()
     return render_template('About/about.html',about=about)
 
+
 @admin.route('/about/add', methods=['GET', 'POST'])
 def addAbout():
     aboutform = AboutForm()
     if request.method == 'POST':
+        ranNumber = random.randint(0,9999)
         file = aboutform.about_img.data
-        file.save(file.filename)
+        photoName = f"photo{ranNumber}.{file.filename.split('.')[1]}"
+        file.save(os.path.join(app.config['UPLOAD_PATH'],photoName))
+        filePath = f"{app.config['UPLOAD_PATH']}/{photoName}"
+        filePathMain = filePath[3:]
         about = About (
             about_title = aboutform.about_title.data,
-            about_img = file.filename,
+            about_img = filePathMain,
             about_content = aboutform.about_content.data,
             about_date = date.today()
         )
@@ -47,10 +52,14 @@ def updateAbout(id):
     about = About.query.get(id)
     aboutform = AboutForm()
     if request.method == 'POST':
+        ranNumber = random.randint(0,9999)
         file = aboutform.about_img.data
-        file.save(file.filename)
+        photoName = f"photo{ranNumber}.{file.filename.split('.')[1]}"
+        file.save(os.path.join(app.config['UPLOAD_PATH'],photoName))
+        filePath = f"{app.config['UPLOAD_PATH']}/{photoName}"
+        filePathMain = filePath[3:]
         newTitle = aboutform.about_title.data
-        newImg = file.filename
+        newImg = filePathMain
         newContent = aboutform.about_content.data
         about.about_title = newTitle
         about.about_img = newImg
@@ -81,11 +90,15 @@ def blog():
 def addBlog():
     blogform = BlogForm()
     if request.method == 'POST':
+        ranNumber = random.randint(0,9999)
         file = blogform.blog_img.data
-        file.save(file.filename)
+        photoName = f"photo{ranNumber}.{file.filename.split('.')[1]}"
+        file.save(os.path.join(app.config['UPLOAD_PATH'],photoName))
+        filePath = f"{app.config['UPLOAD_PATH']}/{photoName}"
+        filePathMain = filePath[3:]
         blog = Blog (
             blog_title = blogform.blog_title.data,
-            blog_img = file.filename,
+            blog_img = filePathMain,
             blog_content = blogform.blog_content.data,
             blog_author = blogform.blog_author.data,
             blog_status = blogform.blog_status.data,
@@ -100,11 +113,15 @@ def addBlog():
 def updateBlog(id):
     blog = Blog.query.get(id)
     blogform = BlogForm()
-    if request.method == 'POST':
+    if request.method == 'POST':       
+        ranNumber = random.randint(0,9999)
         file = blogform.blog_img.data
-        file.save(file.filename)
+        photoName = f"photo{ranNumber}.{file.filename.split('.')[1]}"
+        file.save(os.path.join(app.config['UPLOAD_PATH'],photoName))
+        filePath = f"{app.config['UPLOAD_PATH']}/{photoName}"
+        filePathMain = filePath[3:]
         newTitle = blogform.blog_title.data
-        newImg = file.filename
+        newImg = filePathMain
         newContent = blogform.blog_content.data
         newAuthor = blogform.blog_author.data
         newStatus = blogform.blog_status.data
@@ -271,11 +288,15 @@ def works():
 def addworks():
     worksform = WorksForm()
     if request.method == 'POST':
+        ranNumber = random.randint(0,9999)
         file = worksform.work_img.data
-        file.save(file.filename)
+        photoName = f"photo{ranNumber}.{file.filename.split('.')[1]}"
+        file.save(os.path.join(app.config['UPLOAD_PATH'],photoName))
+        filePath = f"{app.config['UPLOAD_PATH']}/{photoName}"
+        filePathMain = filePath[3:]
         works = Works (
             work_title = worksform.work_title.data,
-            work_img = file.filename,
+            work_img = filePathMain,
             work_content = worksform.work_content.data,
             work_status = worksform.work_status.data,
             work_class = worksform.work_class.data,
@@ -289,4 +310,46 @@ def addworks():
         return redirect ('/admin/works')
     return render_template('Works/add.html', form=worksform)
 
+
+@admin.route('/works/update/<int:id>', methods=['GET', 'POST'])
+def updateWorks(id):
+    work = Works.query.get(id)
+    worksform =WorksForm()
+    if request.method == 'POST':
+        ranNumber = random.randint(0,9999)
+        file = worksform.work_img.data
+        photoName = f"photo{ranNumber}.{file.filename.split('.')[1]}"
+        file.save(os.path.join(app.config['UPLOAD_PATH'],photoName))
+        filePath = f"{app.config['UPLOAD_PATH']}/{photoName}"
+        filePathMain = filePath[3:]
+        newwork_title = worksform.work_title.data
+        newwork_img = filePathMain
+        newwork_content = worksform.work_content.data
+        newwork_status = worksform.work_status.data
+        newwork_class = worksform.work_class.data
+        newwork_data = worksform.work_data.data
+        newwork_brand = worksform.work_brand.data
+        newwork_date = date.today()
+        newcategoryId = worksform.categories.data
+        work.work_title = newwork_title
+        work.work_img = filePathMain
+        work.work_content = newwork_content
+        work.work_status = newwork_status
+        work.work_class = newwork_class
+        work.work_data = newwork_data
+        work.work_brand = newwork_brand
+        work.work_date = newwork_date
+        work.categoryId = newcategoryId
+        db.session.merge(work)
+        db.session.flush()
+        db.session.commit()
+        return redirect ('/admin/works')
+    return render_template('Works/update.html', form=worksform, work=work)
+
+@admin.route('/works/delete/<int:id>')
+def deleteWorks(id):
+    work = Works.query.get(id)
+    db.session.delete(work)
+    db.session.commit()
+    return redirect ('/admin/works')
 # END OF ROUTES FOR WORKS

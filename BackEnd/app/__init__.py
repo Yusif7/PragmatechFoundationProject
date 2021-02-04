@@ -14,7 +14,7 @@ app.config['SECRET_KEY'] = 'mykey'
 db = SQLAlchemy(app)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-app.config['UPLOAD_PATH']='static/upload'
+app.config['UPLOAD_PATH']= "app/static/upload"
 migrate = Migrate(app, db)
 manager = Manager(app)
 manager.add_command('db', MigrateCommand)

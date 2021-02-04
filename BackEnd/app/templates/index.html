@@ -80,19 +80,16 @@
     <section id = "about">
         <div class="container">
             <div class="row">
+                {% for about in aboutList %}
                 <div class="column1">
-                    <img src="../static/img/profile.jpg" alt=""> 
+                    <img src="{{about.about_img}}" alt=""> 
                 </div>
                 <div class="column2">
                     <div class="column2-text">
-                        <h1>I'm Steven Hendrix,
-                            <br>
-                            Web Designer & Web Developer
-                            <br>
-                            from United States, California.
+                        <h1>{{about.about_title}}
                         </h1>
                         <p>
-                            I have rich experience in web site design & building and customization. Also I am good at html, css, javascript, wordpress, php, jquery, bootstrap. I love to talk with you about our unique approach. Feel free to contact me writing an email with your project idea.
+                            {{about.about_content}}
                         </p>
                         <div class="btn">
                             <a href="My resume">
@@ -101,6 +98,7 @@
                         </div>
                     </div>      
                 </div>
+                {% endfor %}
             </div>
         </div>
     </section>
