@@ -34,7 +34,11 @@
         <td>{{work.work_brand}}</td>
         <td>{{work.work_status}}</td>
         <td>{{work.work_date}}</td>
-        <td>{{work.categoryId}}</td>
+        {% for category in categoryList %}
+        {% if category.category_data == work.work_class %}
+        <td>{{category.category_name}}</td>
+        {% endif %}
+        {% endfor %}
         <td><a href="/admin/works/delete/{{work.id}}">Delete</a></td>
         <td><a href="/admin/works/update/{{work.id}}">Update</a></td>
     </tr>

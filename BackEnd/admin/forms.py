@@ -17,6 +17,7 @@ class BlogForm(FlaskForm):
     blog_content = TextAreaField('Content')
     blog_author = StringField('Author')
     blog_status = StringField('Status')
+    blog_info = StringField('Info')
     submit = SubmitField()
 
 # FORMS FOR SKILLS

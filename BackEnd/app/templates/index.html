@@ -102,95 +102,32 @@
             </div>
         </div>
     </section>
-        <section id = 'whatido'>
-            <div class="container">
-                <div class="row">
-                    <div class="title">
-                        <span>What I Do </span>
-                    </div>
-                </div>      
-                <div class="ability">
+    <section id = 'whatido'>
+        <div class="container">
+            <div class="row">
+                <div class="title">
+                    <span>What I Do </span>
+                </div>
+            </div>      
+            <div class="ability">
+                {% for skill in skillList %}
                     <div class="skill1">
                         <div class="items1">
                             <div class="icon1">
-                                <i class="far fa-window-restore"></i>
+                                <i class="{{skill.skill_icon}}"></i>
                             </div>
                             <div class="name1">
-                                UI/UX DESIGN
+                                {{skill.skill_title}}
                             </div>
                             <p class="text1">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+                                {{skill.skill_content}}
                             </p>
                         </div>
                     </div>
-                    <div class="skill2">
-                        <div class="items2">
-                            <div class="icon2">
-                                <i class="far fa-lightbulb"></i>
-                            </div>
-                            <div class="name2">
-                                BRAND IDENTITY
-                            </div>
-                            <p class="text3">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill3">
-                        <div class="items3">
-                            <div class="icon3">
-                                <i class="fas fa-paint-brush"></i>
-                            </div>
-                            <div class="name3">
-                                WEB DESIGN
-                            </div>
-                            <p class="text3">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                            </p>
-                        </div>
-                    </div>   
-                    <div class="skill4">
-                        <div class="items4">
-                            <div class="icon4">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <div class="name4">
-                                UI/UX DESIGN
-                            </div>
-                            <p class="text4">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill5">
-                        <div class="items5">
-                            <div class="icon5">
-                                <i class="fas fa-chart-pie"></i>
-                            </div>
-                            <div class="name5">
-                                UI/UX DESIGN
-                            </div>
-                            <p class="text5">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="skill6">
-                        <div class="items6">
-                            <div class="icon6">
-                                <i class="fas fa-camera"></i>
-                            </div>
-                            <div class="name6">
-                                UI/UX DESIGN
-                            </div>
-                            <p class="text6">
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
-        </section> 
+        </div>
+    </section> 
     <section id = 'works'>
         <div class="container">
             <div class="row">
@@ -198,44 +135,19 @@
                     <span>Recent Works</span> 
                 </div>
                 <div class="allFilters">
-                    <div class="filter1 filterall" data-filter="all">All</div>
-                    <div class="filter1" data-filter="branding">Branding</div>
-                    <div class="filter1" data-filter="mockups">Mockups</div>
-                    <div class="filter1" data-filter="kits">UI Kits</div>
-                    <div class="filter1" data-filter="photography">Photography</div>
+                    {% for category in categoryList %}
+                    <div class="filter1 {{category.category_all}}" data-filter="{{category.category_data}}">{{category.category_name}}</div>
+                    {% endfor %}
                 </div>
-                <div class="work_items">      
-                    <div class="works mockups">
+                <div class="work_items"> 
+                    {% for work in workList %}
+                    <div class="works {{work.work_class}}">
                         <!--Modal divin id ile data modal eyni olmalidir -->
-                        <a href="#nav" id="open_modal" data-modal="works_modal">
-                            <img src="../static/img/work1.jpg" alt="">
+                        <a href="#nav" id="open_modal" data-modal="{{work.work_data}}">
+                            <img src="{{work.work_img}}" alt="">
                         </a>
                     </div>
-                    <div class="works branding">
-                        <a href="#nav" id="open_modal" data-modal="works_modal1">
-                            <img src="../static/img/work2.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="works mockups">
-                        <a href="#nav" id="open_modal" data-modal="works_modal2">
-                            <img src="../static/img/work3.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="works branding">
-                        <a href="#nav" id="open_modal" data-modal="works_modal3">
-                            <img src="../static/img/work4.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="works photography">
-                        <a href="#nav" id="open_modal" data-modal="works_modal4">
-                            <img src="../static/img/work5.jpg" alt="">
-                        </a>
-                    </div>
-                    <div class="works kits">
-                        <a href="#nav" id="open_modal" data-modal="works_modal5">
-                            <img src="../static/img/work6.jpg" alt="">
-                        </a>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -244,36 +156,18 @@
         <div class="container">
             <div class="title">Latest Blogs</div>
             <div class="blog_examples">
+                {% for blog in blogList %}
                 <div class="blog1">
                     <div class="blogphoto">
-                        <img src="../static/img/blog1.png" alt="">
+                        <img src="{{blog.blog_img}}" alt="">
                     </div>
                     <br>
-                    <a href="blog_inner.html"><b>By spite about do of do allow blush</b></a>
+                    <a href="blog_inner.html"><b>{{blog.blog_title}}</b></a>
                     <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate">Larry Stark - 7 September 2016</div>
+                    <p>{{blog.blog_info}}</p>
+                    <div class="blogdate">{{blog.blog_author}}</div>
                 </div>
-                <div class="blog2">
-                    <div class="blogphoto">
-                        <img src="../static/img/blog2.png" alt="">
-                    </div>
-                    <br>
-                    <a href="blog_inner.html"><b>Two Before Arrow Not Relied</b></a>
-                    <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate">Larry Stark - 7 September 2016</div>
-                </div>
-                <div class="blog3">
-                    <div class="blogphoto">
-                        <img src="../static/img/blog3.png" alt="">
-                    </div>
-                    <br>
-                    <a href="blog_inner.html"><b>By spite about do of do allow blush</b></a>
-                    <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate">Larry Stark - 7 September 2016</div>
-                </div>
+                {% endfor %}
             </div>
             <div class="viewbts">
                 <a href="blog_main.html">VIEW BLOG</a>
@@ -342,126 +236,27 @@
             </div>
         </div>
     </footer>
-    <div id="works_modal" class="works_modal">
+    {% for work in workList %}
+    <div id="{{work.work_data}}" class="works_modal">
         <div class="modal_body">
             <div class="modal_content">
                 <a href="#nav" id="modal_close" class="modal_close">
                     <i class="fas fa-window-close"></i>
                 </a>
                 <div>
-                    <img src="../static/img/work1.jpg" alt="">
+                    <img src="{{work.work_img}}" alt="">
                 </div>
                 <div class="modal_text">
                     <div class="prtype">
-                        Mockups
+                        {{work.work_brand}}
                     </div>
-                    <div class="title">Shopping Bag PSD MockUp</div>
-                    <p>Here’s a new b-cards mock-up with several business cards scattered across the scene. The PSD file allows you to easily. Here’s a new b-cards mock-up with several business cards scattered across the scene.</p>    
-                    <a href="#">View Project</a>
+                    <div class="title">{{work.work_title}}</div>
+                    <p>{{work.work_content}}</p>    
                 </div>
             </div>
         </div>
     </div>
-    <div id="works_modal1" class="works_modal">
-        <div class="modal_body">
-            <div class="modal_content">
-                <a href="#nav" id="modal_close" class="modal_close">
-                    <i class="fas fa-window-close"></i>
-                </a>
-                <div>
-                    <img src="../static/img/work2.jpg" alt="">
-                </div>
-                <div class="modal_text">
-                    <div class="prtype">
-                        Branding
-                    </div>
-                    <div class="title">Hanging Wall Sign</div>
-                    <p>The freebie of the day is a logo design kit with an original theme that will help you create stunning mountain bike related logos in just minutes.</p>    
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="works_modal2" class="works_modal">
-        <div class="modal_body">
-            <div class="modal_content">
-                <a href="#nav" id="modal_close" class="modal_close">
-                    <i class="fas fa-window-close"></i>
-                </a>
-                <div>
-                    <img src="../static/img/work3.jpg" alt="">
-                </div>
-                <div class="modal_text">
-                    <div class="prtype">
-                        Mockups
-                    </div>
-                    <div class="title">Realistic Business Cards</div>
-                    <p>Today we’re happy to share with you the mockup of a classic notebook that will help you showcase your drawings. Today we’re happy to share with you the mockup of a classic notebook that will help.</p>    
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="works_modal3" class="works_modal">
-        <div class="modal_body">
-            <div class="modal_content">
-                <a href="#nav" id="modal_close" class="modal_close">
-                    <i class="fas fa-window-close"></i>
-                </a>
-                <div>
-                    <img src="../static/img/work4.jpg" alt="">
-                </div>
-                <div class="modal_text">
-                    <div class="prtype">
-                        Branding
-                    </div>
-                    <div class="title">Juice Bottle Packaging</div>
-                    <p>Today we have for you a set of 20 icons available in 2 styles: colored flat and line version, designed on a 128px grid. These polished icons come in multiple formats so you can easily include them in your projects.</p>    
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="works_modal4" class="works_modal">
-        <div class="modal_body">
-            <div class="modal_content">
-                <a href="#nav" id="modal_close" class="modal_close">
-                    <i class="fas fa-window-close"></i>
-                </a>
-                <div>
-                    <img src="../static/img/work5.jpg" alt="">
-                </div>
-                <div class="modal_text">
-                    <div class="prtype">
-                        Photography
-                    </div>
-                    <div class="title">Mug PSD MockUp</div>
-                    <p>Mapogo is an expertly crafted UI kit perfect for iOS designers and developers. The free sample includes 10 screens (750×1334 px) that can be easily customized in Photoshop</p>    
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div id="works_modal5" class="works_modal">
-        <div class="modal_body">
-            <div class="modal_content">
-                <a href="#nav" id="modal_close" class="modal_close">
-                    <i class="fas fa-window-close"></i>
-                </a>
-                <div>
-                    <img src="../static/img/work6.jpg" alt="">
-                </div>
-                <div class="modal_text">
-                    <div class="prtype">
-                        UI Kits
-                    </div>
-                    <div class="title">A4 Paper PSD</div>
-                    <p>The freebie of the day is Chameleon, a modern UI kit perfect to use for creating a stylish and clean mobile app. This kit includes 10 screens from various categories that can be easily edited.</p>    
-                    <a href="#">View Project</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% endfor %}
     <script src="../static/javascript/js.js"></script>
 </body>
 </html>

@@ -11,6 +11,10 @@ from datetime import date
 @app.route("/", methods=['GET', 'POST'])
 def home():
     about = About.query.all()
+    skill = Skill.query.all()
+    blog = Blog.query.all()
+    category = Category.query.all()
+    work = Works.query.all()
     if request.method == 'POST':
         contact = Contact (
             contact_name = request.form['name'],
@@ -23,4 +27,4 @@ def home():
         db.session.add(contact)
         db.session.commit()
         return redirect ("/")
-    return render_template ('index.html', aboutList=about)
+    return render_template ('index.html', aboutList=about,skillList = skill, blogList = blog, categoryList = category, workList = work)

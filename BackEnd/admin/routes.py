@@ -102,6 +102,7 @@ def addBlog():
             blog_content = blogform.blog_content.data,
             blog_author = blogform.blog_author.data,
             blog_status = blogform.blog_status.data,
+            blog_info = blogform.blog_info.data,
             blog_date = date.today()
         )
         db.session.add(blog)
@@ -125,11 +126,13 @@ def updateBlog(id):
         newContent = blogform.blog_content.data
         newAuthor = blogform.blog_author.data
         newStatus = blogform.blog_status.data
+        newblog_info = blogform.blog_info.data
         blog.blog_title = newTitle
         blog.blog_img = newImg
         blog.blog_content = newContent
         blog.blog_author = newAuthor
         blog.blog_status = newStatus
+        blog.blog_info = newblog_info
         db.session.merge(blog)
         db.session.flush()
         db.session.commit()
@@ -282,7 +285,8 @@ def deleteCategory(id):
 @admin.route('/works')
 def works():
     works = Works.query.all()
-    return render_template('Works/works.html',workList=works)
+    categories = Category.query.all()
+    return render_template('Works/works.html',workList=works, categoryList = categories)
 
 @admin.route('/works/add', methods=['GET', 'POST'])
 def addworks():
