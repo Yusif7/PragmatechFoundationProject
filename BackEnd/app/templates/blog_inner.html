@@ -47,68 +47,33 @@
                 <p>Unpleasant astonished an diminution up partiality. Noisy an their of meant. Death means up civil do an offer wound of. Called square an in afraid direct. Resolution diminution conviction so mr at unpleasing simplicity no. No it as breakfast up conveying earnestly immediate principle. Him son disposed produced humoured overcame she bachelor improved. Studied however out wishing but inhabit fortune windows.</p>
             </div>
             <div class="blog_works">
+                {% for work in workList %}
                 <div class="blog_work1">
-                    <a href="img/blog-work1.jpg" id="open_modal" data-modal="blog_modal" data-lightbox="lbox">
-                        <img src="../static/img/work1.jpg" alt="img1">
+                    <a href="{{work.work_img}}" id="open_modal" data-modal="blog_modal" data-lightbox="lbox">
+                        <img src="{{work.work_img}}" alt="img1">
                     </a>
                 </div>
-                <div class="blog_work2">
-                    <a href="img/blog-work2.jpg" id="open_modal" data-modal="blog_modal1" data-lightbox="lbox">
-                        <img src="../static/img/work2.jpg" alt="">
-                    </a>
-                </div>
-                <div class="blog_work3">
-                    <a href="img/blog-work3.jpg" id="open_modal" data-modal="blog_modal2" data-lightbox="lbox">
-                        <img src="../static/img/work3.jpg" alt="">
-                    </a>
-                </div>
+                {% endfor %}
             </div>
             <div class="postComments">
                 <div class="title">
                     <span>Post Comments</span>
                 </div>
-                <div class="blog_comment1">
-                    <div class="photo1">
-                        <img src="../static/img/blog_comment_photo.jpg" alt="">
-                    </div>
-                    <div class="comment1">
-                        <div class="row1">
-                            <span class="name1">Mary R. Peterson</span>
-                            <a href="#" class="reply">Reply</a>
+                {% for reply in replyList %}
+                    <div class="blog_comment1">
+                        <div class="photo1">
+                            <img src="../static/img/blog_comment_photo.jpg" alt="">
                         </div>
-                        <span class="date1">Sep 26, 2016 at 14:35</span>
-                        <p class="text1">Kept in sent gave feel will oh it we. Has pleasure procured men laughing shutters nay. Old insipidity motionless continuing law shy partiality.</p>
-                    </div>
-                </div>
-                <hr>
-                <div class="blog_comment1">
-                    <div class="photo1">
-                        <img src="../static/img/blog_comment_photo.jpg" alt="">
-                    </div>
-                    <div class="comment1">
-                        <div class="row1">
-                            <span class="name1">Mary R. Peterson</span>
-                            <a href="#" class="reply">Reply</a>
+                        <div class="comment1">
+                            <div class="row1">
+                                <span class="name1">{{reply.blogReply_name}}</span>
+                            </div>
+                            <span class="date1">Sep 26, 2016 at 14:35</span>
+                            <p class="text1">{{reply.blogReply_content}}</p>
                         </div>
-                        <span class="date1">Sep 26, 2016 at 14:35</span>
-                        <p class="text1">Kept in sent gave feel will oh it we. Has pleasure procured men laughing shutters nay. Old insipidity motionless continuing law shy partiality.</p>
                     </div>
-                </div>
-                <hr>
-                <div class="blog_comment1">
-                    <div class="photo1">
-                        <img src="../static/img/blog_comment_photo.jpg" alt="">
-                    </div>
-                    <div class="comment1">
-                        <div class="row1">
-                            <span class="name1">Mary R. Peterson</span>
-                            <a href="#" class="reply">Reply</a>
-                        </div>
-                        <span class="date1">Sep 26, 2016 at 14:35</span>
-                        <p class="text1">Kept in sent gave feel will oh it we. Has pleasure procured men laughing shutters nay. Old insipidity motionless continuing law shy partiality.</p>
-                    </div>
-                </div>
-                <hr>
+                    <hr>
+                {% endfor %}
             </div>
         </div>
     </section>

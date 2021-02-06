@@ -17,8 +17,6 @@
     <link href="{{url_for('.static',filename='css/icons.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{url_for('.static',filename='css/metisMenu.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{url_for('.static',filename='css/app.min.css')}}" rel="stylesheet" type="text/css" />
-
-    
     
     </head>
 
@@ -26,7 +24,7 @@
         <!-- leftbar-tab-menu -->
         <div class="leftbar-tab-menu">
             <div class="main-icon-menu">
-                <a href="../crm/crm-index.html" class="logo logo-metrica d-block text-center">
+                <a href="/admin" class="logo logo-metrica d-block text-center">
                     <span>
                         <img src="{{url_for('.static',filename='images/logo-sm.png')}}" alt="logo-small" class="logo-sm">
                     </span>
@@ -56,7 +54,7 @@
             <div class="main-menu-inner">
                 <!-- LOGO -->
                 <div class="topbar-left">
-                    <a href="../crm/crm-index.html" class="logo">
+                    <a href="/admin" class="logo">
                         <span>
                             <img src="{{url_for('.static',filename='images/logo-dark.png')}}" alt="logo-large" class="logo-lg logo-dark">
                             <img src="{{url_for('.static',filename='images/logo.png')}}" alt="logo-large" class="logo-lg logo-light">
@@ -92,7 +90,6 @@
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="/admin/about">About</a></li>
                                     <li><a href="/admin/skill">WhatIdo</a></li>
-                                    <li><a href="/admin/blog">Blog</a></li>
                                     <li><a href="/admin/contact">Contact</a></li>
                                 </ul>    
                             </li><!--end nav-item-->
@@ -106,15 +103,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><span class="w-100">Blog</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
-                                    <li><a href="/blogs">Blogs</a></li>
-                                    <li><a href="/blogs/add">Add new blog</a></li>
+                                    <li><a href="/admin/blog">Blogs</a></li>
+                                    <li><a href="/admin/blog/add">Add new blog</a></li>
                                 </ul>            
                             </li><!--end nav-item-->
                             <li class="nav-item">
                                 <a class="nav-link" href="#"><span class="w-100">Blog Single</span><span class="menu-arrow"><i class="mdi mdi-chevron-right"></i></span></a>
                                 <ul class="nav-second-level" aria-expanded="false">
                                     <li><a href="/admin/reply">Blog Reply</a></li>
-                                    <li><a href="../others/icons-emoji.html">Emoji <i class="em em-ok_hand"></i></a></li>
                                 </ul>            
                             </li><!--end nav-item-->
                         </ul><!--end nav-->
@@ -212,7 +208,14 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="page-title-box">
-                                <h4 class="page-title">Main</h4>
+                                <h2 class="page-title">Welcome Home, Yusif !!! 
+                                    <hr>
+                                    Dont worry about errors, they would be finish but life is continue!!
+                                    <hr>
+                                    <b>Dont forget to control users feedback!</b>
+
+                                    <h1>And at the last, be happy!!!</h1>
+                                </h2>
                             </div><!--end page-title-box-->
                         </div><!--end col-->
                     </div>
@@ -234,10 +237,14 @@
         <script src="{{url_for('.static',filename='js/waves.js')}}"></script>
         <script src="{{url_for('.static',filename='js/feather.min.js')}}"></script>
         <script src="{{url_for('.static',filename='js/jquery.slimscroll.min.js')}}"></script>
+        <script src="{{url_for('.static',filename='apexcharts/apexcharts.min.js')}}"></script>
 
         <!-- App js -->
         <script src="{{url_for('.static',filename='js/app.js')}}"></script>
-
+        <!-- FORM EDITOR -->
+        <!--Wysiwig js-->
+        <script src="{{url_for('.static',filename='tinymce/tinymce.min.js')}}"></script>
+        <script src="{{url_for('.static',filename='pages/jquery.form-editor.init.js')}}"></script>
     </body>
 
 </html>

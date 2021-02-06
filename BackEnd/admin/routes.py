@@ -99,7 +99,7 @@ def addBlog():
         blog = Blog (
             blog_title = blogform.blog_title.data,
             blog_img = filePathMain,
-            blog_content = blogform.blog_content.data,
+            blog_content = request.form['area'],
             blog_author = blogform.blog_author.data,
             blog_status = blogform.blog_status.data,
             blog_info = blogform.blog_info.data,
@@ -123,7 +123,7 @@ def updateBlog(id):
         filePathMain = filePath[3:]
         newTitle = blogform.blog_title.data
         newImg = filePathMain
-        newContent = blogform.blog_content.data
+        newContent = request.form['area']
         newAuthor = blogform.blog_author.data
         newStatus = blogform.blog_status.data
         newblog_info = blogform.blog_info.data

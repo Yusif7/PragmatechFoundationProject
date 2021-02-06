@@ -1,5 +1,5 @@
 from flask import Blueprint,render_template,redirect,request
-from app.models import BlogReply, Blog
+from app.models import BlogReply, Blog, BlogComment, Works
 from datetime import date
 from app import db
 
@@ -17,6 +17,8 @@ def blogndex():
 
 @blogs.route('/single', methods=['GET', 'POST'])
 def single():
+    blogReply = BlogReply.query.all()
+    work = Works.query.limit(3).all()
     if request.method == 'POST':
         blogReply = BlogReply (
             blogReply_name  = request.form['name'],
@@ -27,5 +29,5 @@ def single():
         db.session.add(blogReply)
         db.session.commit()
         return redirect ("/blog/single")
-    return render_template ('blog_inner.html')
+    return render_template ('blog_inner.html', replyList = blogReply, workList = work)
 
