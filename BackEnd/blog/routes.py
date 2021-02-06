@@ -1,5 +1,5 @@
 from flask import Blueprint,render_template,redirect,request
-from app.models import BlogReply
+from app.models import BlogReply, Blog
 from datetime import date
 from app import db
 
@@ -12,7 +12,8 @@ blogs=Blueprint(
 
 @blogs.route('/')
 def blogndex():
-    return render_template('blog_main.html')
+    blogs = Blog.query.limit(6).all()
+    return render_template('blog_main.html', blogList = blogs)
 
 @blogs.route('/single', methods=['GET', 'POST'])
 def single():

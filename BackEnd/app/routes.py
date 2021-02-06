@@ -12,7 +12,7 @@ from datetime import date
 def home():
     about = About.query.all()
     skill = Skill.query.all()
-    blog = Blog.query.all()
+    blog = Blog.query.limit(3).all()
     category = Category.query.all()
     work = Works.query.all()
     if request.method == 'POST':

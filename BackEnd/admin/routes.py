@@ -357,3 +357,5 @@ def deleteWorks(id):
     db.session.commit()
     return redirect ('/admin/works')
 # END OF ROUTES FOR WORKS
+
+

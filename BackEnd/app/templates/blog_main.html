@@ -19,7 +19,7 @@
                     <a href="#blog_header" class="logo">Hendrix</a>
                 </div>
                 <div class="blog_right">
-                    <a href="index.html" class="back">BACK TO HOME</a>
+                    <a href="/" class="back">BACK TO HOME</a>
                 </div>
             </div>
         </div>
@@ -28,66 +28,18 @@
         <div class="container">
             <div class="title">Latest Blogs</div>
             <div class="row">
+                {% for blog in blogList %}
                 <div class="blog_inner1">
                     <div class="blogphoto1">
-                        <img src="../static/img/blog1.png" alt="">
+                        <img src="{{blog.blog_img}}" alt="">
                     </div>
                     <br>
-                    <a href="blog_inner.html"><b>By spite about do of do allow blush</b></a>
+                    <a href="blog_inner.html"><b>{{blog.blog_title}}</b></a>
                     <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate1">Larry Stark - 7 September 2016</div>
+                    <p>{{blog.blog_info}}</p>
+                    <div class="blogdate1">{{blog.blog_author}}</div>
                 </div>
-                <div class="blog_inner2">
-                    <div class="blogphoto1">
-                        <img src="../static/img/blog2.png" alt="">
-                    </div>
-                    <br>
-                    <a href="blog_inner.html"><b>Two Before Arrow Not Relied</b></a>
-                    <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate1">Larry Stark - 7 September 2016</div>
-                </div>
-                <div class="blog_inner3">
-                    <div class="blogphoto1">
-                        <img src="../static/img/blog3.png" alt="">
-                    </div>
-                    <br>
-                    <a href="blog_inner.html"><b>By spite about do of do allow blush</b></a>
-                    <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate1">Larry Stark - 7 September 2016</div>
-                </div>
-                <div class="blog_inner4">
-                    <div class="blogphoto1">
-                        <img src="../static/img/blog1.png" alt="">
-                    </div>
-                    <br>
-                    <a href="blog_inner.html"><b>By spite about do of do allow blush</b></a>
-                    <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate1">Larry Stark - 7 September 2016</div>
-                </div>
-                <div class="blog_inner5">
-                    <div class="blogphoto1">
-                        <img src="../static/img/blog2.png" alt="">
-                    </div>
-                    <br>
-                    <a href="blog_inner.html"><b>Two Before Arrow Not Relied</b></a>
-                    <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate1">Larry Stark - 7 September 2016</div>
-                </div>
-                <div class="blog_inner6">
-                    <div class="blogphoto1">
-                        <img src="../static/img/blog3.png" alt="">
-                    </div>
-                    <br>
-                    <a href="blog_inner.html"><b>By spite about do of do allow blush</b></a>
-                    <br>
-                    <p>Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat.</p>
-                    <div class="blogdate1">Larry Stark - 7 September 2016</div>
-                </div>
+                {% endfor %}
             </div>
             <div class="viewbts">
                 <a href="blog_main.html">LOAD MORE</a>
