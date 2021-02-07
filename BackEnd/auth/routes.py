@@ -24,7 +24,7 @@ def login_post():
     if request.method == 'POST':
         email=loginForm.email.data
         password = loginForm.password.data
-        if email == admin.email and password == 'z240820a':
+        if email == admin.email and password == '123456':
             return redirect ("/admin")
         else:
             flash('Incorrect mail or password')
