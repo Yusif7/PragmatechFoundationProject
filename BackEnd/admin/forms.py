@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SelectField, SubmitField,TextAreaField,FileField
+from wtforms import StringField, SelectField, SubmitField,TextAreaField,FileField, PasswordField
 from app.models import Category
 
 # FORMS FOR ABOUT 
@@ -48,4 +48,11 @@ class WorksForm(FlaskForm):
     work_status = StringField('Status')
     work_img = FileField()
     categories = SelectField('CatList', choices=Category.query.with_entities(Category.id, Category.category_name).all())
+    submit = SubmitField()
+
+
+
+class LoginForm(FlaskForm):
+    email = StringField('Email')
+    password = PasswordField('Password')
     submit = SubmitField()

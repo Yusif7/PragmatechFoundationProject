@@ -23,12 +23,11 @@ manager.add_command('db', MigrateCommand)
 from . import routes
 from . import forms
 from . import models
-#from . routes import blogs, blogsS
+
 import admin
 import blog
+import auth
 
 
 
 
-#app.register_blueprint(blogs)
-#app.register_blueprint(blogsS)

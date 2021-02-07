@@ -1,6 +1,8 @@
 # For createing tables we database class
 from app import db
 from datetime import date
+#UserMixin добавит в модель атрибуты Flask-Login, чтобы Flask-Login мог с ней работать.
+from flask_login import UserMixin
 
 # ABOUT MODEL
 
@@ -100,3 +102,9 @@ class BlogReply(db.Model):
     blogReply_date = db.Column(db.DateTime)
 
 # END OF BLOG COMMENT REPLY
+
+class Admin(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(db.String(100), unique=True)
+    password = db.Column(db.String(100))
+    name = db.Column(db.String(1000))
